@@ -1,29 +1,28 @@
-# Release gate — Persian NLP Studio
+# Release review — Persian NLP Studio
 
-Original private course archive: `AlirezaBelal/persian-nlp-course-projects`. Keep **PRIVATE** and preserve its contents and Git history.
+## Public source boundary
 
-## Allowlist and rights
+- [x] Dedicated clean product repository (`AlirezaBelal/persian-nlp-studio`).
+- [x] Product repository **Public**, original research repository still **Private**.
+- [x] No old dataset, notebook, pretrained weights, report or source history copied.
+- [x] Original client-side code, documentation and small synthetic/local lists only.
+- [x] No tracking, backend or runtime third-party dependencies.
+- [x] Source text excluded from numeric-only JSON export.
 
-- [x] New independent source repository with clean initial history.
-- [x] Only original product HTML, CSS, JS, tests, docs and workflows.
-- [x] No course notebooks, student identifiers, original course datasets, model weights or reports.
-- [x] No third-party fonts, imagery or runtime libraries bundled.
-- [x] MIT license limited to new product source.
+## Verification for the new five-tool suite
 
-## Acceptance
+- [ ] Unit tests for all new engines green on the final commit.
+- [ ] Browser desktop/mobile smoke tests on all five modules green.
+- [ ] Source, privacy and scope documentation reviewed.
+- [ ] Updated GitHub Pages workflow deploys all allowlisted assets, including `tools.html`.
+- [ ] Actual public site URL verified after deployment.
+- [ ] Original research repository remains Private after publication.
 
-- [x] Deterministic lexical processing and numeric-only JSON export.
-- [x] New repository source PR CI green (verified 2026-11-02; post-merge CI still required).
-- [x] Chromium desktop/mobile browser acceptance green (6/6; actual browser downloads and network activity inspected).
-- [ ] Security and UI copy reviewed; no network uploads of entered text.
-- [ ] Final public tree rechecked for inherited coursework and secrets.
+## Separate future trained-model phase
 
-## Publication
+- [ ] Validate redistribution and training rights before any dataset/checkpoint reuse.
+- [ ] Define held-out evaluations and error/fairness metrics for new models.
+- [ ] Explicit safety review for any clinical or prescription-adjacent features.
+- [ ] Preserve clear user labels for experimental vs validated functionality.
 
-- [ ] Make ONLY `AlirezaBelal/persian-nlp-studio` Public.
-- [ ] In Settings → Pages, use **GitHub Actions** as Build and deployment source.
-- [ ] Run deployment workflow and verify the *actual* public site URL.
-- [ ] Verify previous coursework repository remains PRIVATE.
-- [ ] Create a release version only after passing the above steps.
-
-Never treat CI alone as proof that Pages is public or all browser/accessibility checks passed.
+**Important:** Shipping independently written functional text tools does not mean that the original university-trained models were transferred. Do not claim that equivalence.
