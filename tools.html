@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081625">
+  <meta name="description" content="مجموعه‌ای از پنج ابزار کاربردی و آفلاین برای بررسی پیکره، رسم‌الخط، نام دارو، واژه‌های احساسی و شعر فارسی.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>ابزارهای متن‌نما | Persian NLP Studio</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./tools.css">
+  <script type="module" src="./src/tools.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#tools-main">رفتن به ابزارهای کاربردی</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html">
+        <span class="brand-icon" aria-hidden="true">فا</span>
+        <span><strong>متن‌نما</strong><small>Persian NLP Studio</small></span>
+      </a>
+      <nav class="nav" aria-label="بخش‌های محصول">
+        <a href="./index.html">تحلیل عمومی</a>
+        <a href="#tool-index" aria-current="page">ابزارهای تخصصی</a>
+        <a href="#tool-notice">دربارهٔ دقت</a>
+      </nav>
+      <span class="privacy-indicator"><span aria-hidden="true">●</span> پردازش محلی</span>
+    </header>
+    <main id="tools-main" class="tools-main">
+      <section class="tools-hero" aria-labelledby="tools-title">
+        <span class="section-kicker">پنج قابلیت کاربردی · بدون ارسال متن به سرور</span>
+        <h1 id="tools-title">ابزارهایی برای <span>کاوش متن فارسی</span></h1>
+        <p>از جست‌وجوی درون متن و بازبینی نوشتار تا بررسی نام‌ها، سرنخ‌های احساسی و ساختار شعر. نتیجه‌ها قابل‌بررسی‌اند و به‌جای ادعای «هوش مصنوعی»، روش هر ابزار مشخص است.</p>
+      </section>
+      <nav class="tools-index" id="tool-index" aria-label="انتخاب ابزار">
+        <a href="#corpus"><span>۰۱</span> پیکره‌کاو</a>
+        <a href="#hekasreh"><span>۰۲</span> بازبین «ه»</a>
+        <a href="#medicine"><span>۰۳</span> نام‌یاب</a>
+        <a href="#sentiment"><span>۰۴</span> احساس‌نما</a>
+        <a href="#poetry"><span>۰۵</span> شعرسنج</a>
+      </nav>
+
+      <section class="tool-section" id="corpus" aria-labelledby="corpus-title">
+        <div class="tool-heading"><span>۰۱ / کاوش متون</span><h2 id="corpus-title">پیکره‌کاو</h2><p>عبارت دلخواهت را در متن پیدا کن و واژه‌های دوتایی پرتکرار را ببین.</p></div>
+        <div class="panel tool-panel">
+          <div class="two-inputs">
+            <div><label for="corpus-text">متن برای جست‌وجو</label><textarea id="corpus-text" maxlength="20000" rows="5" placeholder="متن خود را وارد کن…"></textarea></div>
+            <div class="tool-aside"><label for="corpus-query">عبارت مورد جست‌وجو</label><input id="corpus-query" maxlength="100" type="text" placeholder="مثلاً فارسی" autocomplete="off"><button class="btn btn-outline sample" type="button" data-sample="corpus">نمونهٔ ساختگی</button><p class="hint">عبارت به‌صورت واژگانی و بدون درک مفهوم پیدا می‌شود.</p></div>
+          </div>
+          <div class="tool-result" aria-live="polite">
+            <h3>نتیجهٔ جست‌وجو: <strong id="corpus-count">۰</strong> مورد</h3>
+            <div class="tool-result-columns"><div><h4>بافت‌های پیدا‌شده</h4><div id="corpus-contexts" class="result-stack"><p class="empty-tool">هنوز عبارتی وارد نشده است.</p></div></div><div><h4>عبارت‌های دوتایی پرتکرار</h4><div id="corpus-bigrams" class="result-stack"><p class="empty-tool">متن نمونه را امتحان کن.</p></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tool-section" id="hekasreh" aria-labelledby="hekasreh-title">
+        <div class="tool-heading"><span>۰۲ / بازبینی نوشتار</span><h2 id="hekasreh-title">بازبین «ه» و «ی»</h2><p>شکل‌های قابل‌بازبینی مانند «خانه ی» یا «خانه‌ی» را پیدا کن؛ اصلاح قطعی انجام نمی‌شود.</p></div>
+        <div class="panel tool-panel">
+          <label for="hekasreh-text">متن فارسی</label>
+          <textarea id="hekasreh-text" maxlength="20000" rows="4" placeholder="متن فارسی برای بازبینی…"></textarea>
+          <div class="tool-actions"><button class="btn btn-outline sample" type="button" data-sample="hekasreh">نمونهٔ ساختگی</button><span class="tool-muted">هیچ تغییری خودکار به متن اصلی اعمال نمی‌شود.</span></div>
+          <div class="tool-result" aria-live="polite"><h3>موارد نیازمند بررسی: <strong id="hekasreh-count">۰</strong></h3><div id="hekasreh-results" class="result-stack"><p class="empty-tool">نمونه‌ای وارد کن تا الگوها مشخص شوند.</p></div></div>
+        </div>
+      </section>
+
+      <section class="tool-section" id="medicine" aria-labelledby="medicine-title">
+        <div class="tool-heading"><span>۰۳ / جست‌وجوی نام</span><h2 id="medicine-title">نام‌یاب فارسی و انگلیسی</h2><p>نام ژنریک را با املای فارسی، انگلیسی یا بخشی از نام جست‌وجو کن.</p></div>
+        <div class="panel tool-panel">
+          <label for="medicine-query">نام مورد جست‌وجو</label>
+          <div class="tool-search"><input id="medicine-query" maxlength="100" type="text" placeholder="مثلاً metformin یا متفورمین" autocomplete="off"><button class="btn btn-outline sample" type="button" data-sample="medicine">نمونهٔ ساختگی</button></div>
+          <p class="safety-note"><strong>توجه:</strong> فهرست کوچک آموزشیِ املای ژنریک است، نه پایگاه دارویی معتبر، تشخیص پزشکی، تجویز یا تأیید جایگزینی دارو. تطبیق تقریبی ممکن است اشتباه باشد.</p>
+          <div class="tool-result" aria-live="polite"><h3>نام‌های نزدیک به جست‌وجو</h3><div id="medicine-results" class="result-stack"><p class="empty-tool">نامی را وارد کن.</p></div></div>
+        </div>
+      </section>
+
+      <section class="tool-section" id="sentiment" aria-labelledby="sentiment-title">
+        <div class="tool-heading"><span>۰۴ / بررسی نشانه‌ها</span><h2 id="sentiment-title">احساس‌نما</h2><p>واژه‌های مثبت و منفی را در نوشته پیدا کن؛ بدون ادعای تشخیص واقعی احساسات نویسنده.</p></div>
+        <div class="panel tool-panel">
+          <label for="sentiment-text">متن نظر یا نقد</label>
+          <textarea id="sentiment-text" maxlength="20000" rows="4" placeholder="یک نظر فارسی وارد کن…"></textarea>
+          <div class="tool-actions"><label class="tool-inline-label" for="sentiment-aspect">موضوع مدنظر</label>
+            <select id="sentiment-aspect"><option value="all">کل متن</option><option value="story">داستان</option><option value="acting">بازیگری</option><option value="music">موسیقی</option><option value="direction">کارگردانی</option></select>
+            <button class="btn btn-outline sample" type="button" data-sample="sentiment">نمونهٔ ساختگی</button>
+          </div>
+          <div class="tool-result" aria-live="polite"><h3 id="sentiment-label">هنوز متنی بررسی نشده است.</h3><p id="sentiment-summary" class="tool-muted">فقط شواهد واژگانی نمایش داده می‌شوند.</p><div id="sentiment-evidence" class="result-stack"></div></div>
+        </div>
+      </section>
+
+      <section class="tool-section" id="poetry" aria-labelledby="poetry-title">
+        <div class="tool-heading"><span>۰۵ / تحلیل ساختار شعر</span><h2 id="poetry-title">شعرسنج</h2><p>تعداد سطرها، پایان‌بندی‌های هم‌شکل و کلمات پرتکرار شعر خودت را بررسی کن.</p></div>
+        <div class="panel tool-panel">
+          <label for="poetry-text">چند سطر شعر</label>
+          <textarea id="poetry-text" maxlength="20000" rows="6" placeholder="هر مصراع یا سطر را جداگانه وارد کن…"></textarea>
+          <div class="tool-actions"><button class="btn btn-outline sample" type="button" data-sample="poetry">نمونهٔ تازه و ساختگی</button><span class="tool-muted">هم‌پایانی نوشتاری، جایگزین قافیه‌شناسی عروضی یا تولید شعر نیست.</span></div>
+          <div class="tool-result" aria-live="polite"><div id="poetry-metrics" class="small-metrics"></div><div class="tool-result-columns"><div><h4>پایان‌بندی‌های مشابه</h4><div id="poetry-endings" class="result-stack"><p class="empty-tool">شعری وارد کن.</p></div></div><div><h4>واژه‌های پرتکرار</h4><div id="poetry-frequencies" class="result-stack"></div></div></div></div>
+        </div>
+      </section>
+
+      <aside class="panel accuracy-notice" id="tool-notice">
+        <h2>دربارهٔ دقت و محرمانگی</h2>
+        <p>تمام پردازش‌ها در مرورگر انجام می‌شوند و ورودی‌ها ارسال یا ذخیره نمی‌شوند. این ابزارها از الگوریتم‌های قاعده‌محور و فهرست‌های کوچک و مستقل استفاده می‌کنند؛ مدل یادگیری ماشین اجرا نمی‌شود. شناسایی «هٔ کسره»، نشانه‌های احساسی، مشابهت نام دارو و هم‌پایانی شعر ممکن است مبهم یا نادرست باشند. خروجی را پیش از استفاده بررسی کن.</p>
+        <a href="./index.html">بازگشت به تحلیل عمومی متن</a>
+      </aside>
+    </main>
+    <footer class="footer"><span>متن‌نما · ابزارهای پردازش محلی فارسی</span><span>ابزارهای واژگانی مستقل؛ بدون وعدهٔ دقتِ مدل‌های آموزش‌دیده</span></footer>
+  </div>
+</body>
+</html>
