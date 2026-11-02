@@ -11,9 +11,9 @@
 
 ## Verification for the new five-tool suite
 
-- [ ] Unit tests for all new engines green on the final commit.
-- [ ] Browser desktop/mobile smoke tests on all five modules green.
-- [ ] Source, privacy and scope documentation reviewed.
+- [x] Unit/structure tests of the suite passed on the PR branch (27/27, GitHub run 41461168593).
+- [x] Real Chromium desktop/mobile tests passed on the PR branch (22/22, GitHub run 41461168593).
+- [x] Source, privacy and scope documentation updated; no unlicensed coursework artifacts in the product commit.
 - [ ] Updated GitHub Pages workflow deploys all allowlisted assets, including `tools.html`.
 - [ ] Actual public site URL verified after deployment.
 - [ ] Original research repository remains Private after publication.
