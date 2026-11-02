@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check src/engine.mjs && node --check src/app.mjs && node --check src/features.mjs && node --check src/tools.mjs"
+    "check": "node --check src/engine.mjs && node --check src/app.mjs && node --check src/features.mjs && node --check src/tools.mjs && node --check src/corpus-import.mjs"
   },
   "engines": {
     "node": ">=22"
