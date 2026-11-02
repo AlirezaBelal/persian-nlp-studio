@@ -1,6 +1,6 @@
 # Product modules and accuracy boundaries
 
-All modules below are independently implemented, client-side tools. The product does not contain third-party datasets, pretrained models, notebooks, or restricted historical artifacts.
+All public-facing modules below are independently implemented client-side tools. No external model is invoked and no sensitive or restricted data package is required for normal operation.
 
 | Product module | Implemented now | If pursuing trained-model functionality later |
 | --- | --- | --- |
@@ -18,8 +18,8 @@ The sixth general-text module (the landing page) retains normalization, word sta
 - **No medical prescriptions, indications, dosage or clinical equivalence** are returned.
 - Aspect-based sentiment is **not an ML classifier**; adjective scope is approximate.
 - Poetry ending similarity is **not** Persian metrical analysis or authentic style transfer.
-- No external network API, crawling or model download occurs.
-- Inputs are capped to 20,000 UTF-16 code units per field in the UI.
+- No external inference API, crawling or model download occurs in the published browser application.
+- User input is capped to 20,000 UTF-16 code units per text area in the UI. Local corpus imports also enforce 80,000 bytes per file and at most 1,000 JSONL records.
 - Typed text is not saved in an application database or uploaded to a backend.
 
 ## Test gate
@@ -28,4 +28,4 @@ Each module needs deterministic unit tests and real browser desktop/mobile check
 
 ## Provenance of new implementation
 
-Code and samples here are original text-product implementations. No historical academic files, class submissions, trained model checkpoint binaries or source repository Git history have been copied. The old private research repository is independent, stays private, and is not required to build this product.
+Public product code and samples are independently implemented. The site does not bundle third-party restricted datasets, pretrained checkpoint binaries, or unrelated repository history. Future inference features require separate rights, privacy, deployment and evaluation reviews.

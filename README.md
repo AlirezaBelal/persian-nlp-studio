@@ -1,6 +1,6 @@
 # متن‌نما · Persian NLP Studio
 
-**A privacy-first, browser-based suite of Persian text tools.** This is a product with its own original source and Git history—not a copy of past class assignments or datasets.
+**A privacy-first, browser-based suite of Persian text tools.** This is an independent, user-facing product with clear functional and privacy boundaries.
 
 ## Use the product
 
@@ -42,16 +42,16 @@ CI also tests the real Chromium browser on desktop and mobile viewport sizes. Th
 
 All frontend logic lives in `src/`. The names in the small generic-name list are common nonproprietary spellings, selected independently; no external medical dataset has been copied. Sample text was authored for this product.
 
-The repository contains no academic datasets, original trained models, classroom notebooks, historical reports or old Git history. The original private source-of-research remains independently managed and is **not** a dependency.
+The public package contains only product source, tests, documentation and deployment assets. It does not bundle third-party datasets, pretrained weights, confidential artifacts or unrelated project history.
 
-Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE) and [feature scope and next steps](FEATURE_SCOPE.md).
+Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE), [feature scope](FEATURE_SCOPE.md) and [maintenance instructions](MAINTENANCE.md). A repository-scoped GitHub workflow skill is available at [`.agents/skills/persian-nlp-github-maintainer/SKILL.md`](.agents/skills/persian-nlp-github-maintainer/SKILL.md).
 
 ## Hosting
 
-GitHub Pages reported a successful deployment for commit `85eba89` on 2026-11-02:
+GitHub Pages reported a successful deployment of the current product line on 2026-11-02:
 
 - [Open the public text analyzer](https://alirezabelal.github.io/persian-nlp-studio/)
 - [Open the five-tool suite](https://alirezabelal.github.io/persian-nlp-studio/tools.html)
-- [View the successful Pages deployment workflow](https://github.com/AlirezaBelal/persian-nlp-studio/actions/runs/41461677939)
+- [View the successful Pages deployment workflow](https://github.com/AlirezaBelal/persian-nlp-studio/actions/runs/41519370501)
 
 The hosting URLs are evidenced by the GitHub deployment log; direct independent HTTP access from the assistant's execution environment was unavailable. Verify in your own browser if you need an external availability check.
