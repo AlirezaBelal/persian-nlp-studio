@@ -6,4 +6,4 @@ The interface uses a restrictive Content Security Policy, including `connect-src
 
 To report vulnerabilities, use GitHub's private vulnerability reporting if enabled; otherwise contact the maintainer privately rather than publishing exploit details or private user text.
 
-Only the independent product's code is licensed or released here. Do not import unrelated academic coursework, trained model weights or third-party assets without review.
+Only reviewed product source is licensed and released here. Do not import unverified third-party code, datasets, model weights, private materials or credentials.
