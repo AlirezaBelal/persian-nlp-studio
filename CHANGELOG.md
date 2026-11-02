@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Codex skills integration
+
+- Replace the retired custom maintainer skill with a pinned `am-will/codex-skills` Git submodule.
+- Add optional, version-checked project-scoped setup for selected Codex skills.
+- Update AGENTS, maintenance and regression checks; do not auto-execute third-party hooks or agents.
+- Keep runtime code, static Pages packaging, and private-source boundaries unchanged.
+
+
 ## Unreleased
 - Run source validation before Pages packaging.
 - Document backup, restore and explicit-approval gates for private-repository retirement.
