@@ -44,7 +44,7 @@ All frontend logic lives in `src/`. The names in the small generic-name list are
 
 The public package contains only product source, tests, documentation and deployment assets. It does not bundle third-party datasets, pretrained weights, confidential artifacts or unrelated project history.
 
-Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE), [feature scope](FEATURE_SCOPE.md) and [maintenance instructions](MAINTENANCE.md). A repository-scoped GitHub workflow skill is available at [`.agents/skills/persian-nlp-github-maintainer/SKILL.md`](.agents/skills/persian-nlp-github-maintainer/SKILL.md).
+Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE), [feature scope](FEATURE_SCOPE.md) and [maintenance instructions](MAINTENANCE.md). For coding-agent workflows, the [external Codex skills collection and installation instructions](CODEX_SKILLS.md) are available. The pinned Git submodule is opt-in and is not part of the deployed website.
 
 ## Hosting
 
