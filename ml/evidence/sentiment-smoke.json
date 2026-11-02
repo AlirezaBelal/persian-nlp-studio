@@ -1,0 +1,1 @@
+{"model": "HooshvareLab/bert-fa-base-uncased-sentiment-deepsentipers-binary", "revision": "5f8fd46cd438d48ce4ff9fb9a01024b857f6204c", "kind": "synthetic-smoke-not-independent-evaluation", "labels": {"0": "negative", "1": "positive"}, "probabilities": [[0.016443900763988495, 0.9835560321807861], [0.9995494484901428, 0.00045054443762637675]]}
