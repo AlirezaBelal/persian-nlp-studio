@@ -48,4 +48,10 @@ Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE) and [fea
 
 ## Hosting
 
-The `pages.yml` workflow assembles an allowlisted static site on `master`, *only for a public repo*. A live URL must be confirmed from GitHub Pages workflow evidence, not assumed.
+GitHub Pages reported a successful deployment for commit `85eba89` on 2026-11-02:
+
+- [Open the public text analyzer](https://alirezabelal.github.io/persian-nlp-studio/)
+- [Open the five-tool suite](https://alirezabelal.github.io/persian-nlp-studio/tools.html)
+- [View the successful Pages deployment workflow](https://github.com/AlirezaBelal/persian-nlp-studio/actions/runs/41461677939)
+
+The hosting URLs are evidenced by the GitHub deployment log; direct independent HTTP access from the assistant's execution environment was unavailable. Verify in your own browser if you need an external availability check.

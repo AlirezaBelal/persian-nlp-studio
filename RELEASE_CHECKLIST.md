@@ -14,9 +14,10 @@
 - [x] Unit/structure tests of the suite passed on the PR branch (27/27, GitHub run 41461168593).
 - [x] Real Chromium desktop/mobile tests passed on the PR branch (22/22, GitHub run 41461168593).
 - [x] Source, privacy and scope documentation updated; no unlicensed coursework artifacts in the product commit.
-- [ ] Updated GitHub Pages workflow deploys all allowlisted assets, including `tools.html`.
-- [ ] Actual public site URL verified after deployment.
-- [ ] Original research repository remains Private after publication.
+- [x] Pages workflow stages `index.html`, `tools.html`, CSS and local JS; GitHub reports success for commit 85eba89 (run 41461677939).
+- [x] Official GitHub Pages environment URL is reported as https://alirezabelal.github.io/persian-nlp-studio/ (deployment log 41461677939).
+- [ ] Direct independent HTTP fetch of the live site unavailable in this environment; optional external browser verification remains.
+- [x] Original research repository remained Private on 2026-11-02 (branch master 7790982).
 
 ## Separate future trained-model phase
 
