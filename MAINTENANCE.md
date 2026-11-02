@@ -31,7 +31,7 @@ All publicly deployed modules run in the browser and are lexical or rule-based. 
 
 ## Durable agent instructions
 
-`AGENTS.md` documents repository-wide safety and quality rules. `.agents/skills/persian-nlp-github-maintainer/SKILL.md` packages the GitHub review/cleanup/CI/Pages workflow for Codex-compatible agents; it does not connect a GitHub account or automatically grant permissions.
+`AGENTS.md` retains the repository's safety and quality rules. `CODEX_SKILLS.md` documents the pinned external `am-will/codex-skills` Git submodule and an opt-in, project-local Codex setup. The old custom maintainer skill is no longer part of this repository. Installation is not automatic and does not grant account permissions.
 
 ## Retirement checklist
 

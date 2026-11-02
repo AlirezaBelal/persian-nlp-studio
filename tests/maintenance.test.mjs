@@ -4,17 +4,30 @@ import { readFileSync, existsSync } from "node:fs";
 
 const text = path => readFileSync(new URL(path, import.meta.url), "utf8");
 
-test("GitHub skill has discovery metadata and repository scope guardrails", () => {
-  const skill = text("../.agents/skills/persian-nlp-github-maintainer/SKILL.md");
+test("the external Codex skills collection is pinned and installed only by opt-in", () => {
+  const modules = text("../.gitmodules");
+  const docs = text("../CODEX_SKILLS.md");
+  const script = text("../scripts/setup-codex-skills.sh");
   const agents = text("../AGENTS.md");
-  assert.match(skill, /^---\s*\nname: persian-nlp-github-maintainer\n/);
-  assert.match(skill, /\ndescription: .+\n/);
-  assert.match(skill, /AlirezaBelal\/persian-nlp-studio/);
-  assert.match(skill, /Do not delete, empty, change visibility/);
-  assert.match(skill, /GitHub Pages/);
-  assert.match(agents, /persian-nlp-github-maintainer\/SKILL\.md/);
+  const maintenance = text("../MAINTENANCE.md");
+  const readme = text("../README.md");
+  const pin = "9f954c3b63fda0d1875252009c196bf15072c1ca";
+  assert.match(modules, /path = vendor\/codex-skills/);
+  assert.match(modules, /url = https:\/\/github\.com\/am-will\/codex-skills\.git/);
+  assert.ok(docs.includes(pin));
+  assert.ok(script.includes(pin));
+  assert.match(script, /git -C "\$root" submodule update --init/);
+  assert.match(script, /gh skill install "\$source_dir" planner --from-local --agent codex --scope project/);
+  assert.match(script, /gh skill install "\$source_dir" frontend-responsive-ui --from-local --agent codex --scope project/);
+  assert.match(agents, /CODEX_SKILLS\.md/);
   assert.match(agents, /npm run check/);
   assert.match(agents, /npm test/);
+  assert.match(maintenance, /Retirement checklist/);
+  assert.match(readme, /CODEX_SKILLS\.md/);
+  for (const file of [agents, maintenance, readme]) {
+    assert.doesNotMatch(file, /persian-nlp-github-maintainer/);
+  }
+  assert.ok(!existsSync(new URL("../.agents/skills/persian-nlp-github-maintainer/SKILL.md", import.meta.url)));
 });
 
 test("the release manifest includes every local browser script import", () => {

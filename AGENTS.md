@@ -29,5 +29,11 @@ Check the existing GitHub Actions `Product checks` workflow, including real Chro
 - No unsupported medical, sentiment, orthography correction, poetry style transfer, model quality, or AI performance claims.
 - Keep release docs accurate and product-oriented.
 
-## Reusable skill
-For GitHub review, repository cleanup, CI repair, Pages releases, or PR handoff, use `.agents/skills/persian-nlp-github-maintainer/SKILL.md`. This is repository guidance, not an automatic grant of GitHub permissions; use an authorized GitHub connector or explicit user-authorized local credentials.
+## Codex skills
+
+The former custom maintainer skill has been retired. The externally maintained [am-will/codex-skills](https://github.com/am-will/codex-skills) collection is pinned as a Git submodule at `vendor/codex-skills`. See `CODEX_SKILLS.md` for the exact upstream SHA and the **optional**, project-local installation command.
+
+- Do not automatically run third-party install scripts, hooks, agents or network tools.
+- The default selections for an authorized manual setup are `planner` and `frontend-responsive-ui`.
+- No repository skill overrides the scope, privacy, accuracy, release or deletion rules above.
+- GitHub operations require an authorized account or connector; the external collection does not grant access.

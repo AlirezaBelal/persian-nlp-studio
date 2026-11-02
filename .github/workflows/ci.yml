@@ -21,6 +21,8 @@ jobs:
           node-version: '22'
       - run: npm run check
       - run: npm test
+      - name: Validate optional skills bootstrap syntax (do not execute)
+        run: bash -n scripts/setup-codex-skills.sh
 
   browser:
     name: Chromium desktop and mobile smoke tests
