@@ -13,8 +13,8 @@ Original private course archive: `AlirezaBelal/persian-nlp-course-projects`. Kee
 ## Acceptance
 
 - [x] Deterministic lexical processing and numeric-only JSON export.
-- [ ] New repository source CI green.
-- [ ] Chromium desktop/mobile browser acceptance green.
+- [x] New repository source PR CI green (verified 2026-11-02; post-merge CI still required).
+- [x] Chromium desktop/mobile browser acceptance green (6/6; actual browser downloads and network activity inspected).
 - [ ] Security and UI copy reviewed; no network uploads of entered text.
 - [ ] Final public tree rechecked for inherited coursework and secrets.
 
