@@ -1,6 +1,6 @@
 # متن‌نما · Persian NLP Studio
 
-**A privacy-first, browser-based suite of Persian text tools.** This is a product with its own original source and Git history—not a copy of past class assignments or datasets.
+**A privacy-first, browser-based suite of Persian text tools.** This is an independent, user-facing product with clear functional and privacy boundaries.
 
 ## Use the product
 
