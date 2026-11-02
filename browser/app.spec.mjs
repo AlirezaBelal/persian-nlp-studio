@@ -56,3 +56,15 @@ test("comparison and controls work without sending entered text to a backend", a
     expect(r.postData).toBeNull();
   }
 });
+
+
+test("keyboard navigation, focus target and text rendering are safe", async ({ page }) => {
+  let dialogs = 0;
+  page.on("dialog", dialog => { dialogs += 1; void dialog.dismiss(); });
+  await page.goto("/");
+  await page.keyboard.press("Tab");
+  await expect(page.locator(".skip-link")).toBeFocused();
+  await page.locator("#main-text").fill("<script>alert('unexpected')</script> کتاب");
+  await expect(page.locator("#normalized-output")).toContainText("<script>");
+  expect(dialogs).toBe(0);
+});
