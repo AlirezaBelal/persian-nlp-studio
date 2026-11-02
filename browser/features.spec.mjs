@@ -69,3 +69,16 @@ test("entered text is never sent outside local origin; HTML stays inert",async (
     expect(r.body).toBeNull();
   }
 });
+
+test('user-owned corpus import handles text, JSONL and invalid files locally', async ({ page }) => {
+  await page.goto('/tools.html');
+  await page.locator('#corpus-file').setInputFiles({ name: 'sample.txt', mimeType: 'text/plain', buffer: Buffer.from('زبان فارسی زبان') });
+  await expect(page.locator('#corpus-text')).toHaveValue('زبان فارسی زبان');
+  await page.locator('#corpus-query').fill('زبان');
+  await expect(page.locator('#corpus-count')).toHaveText('۲');
+  await page.locator('#corpus-file').setInputFiles({ name: 'sample.jsonl', mimeType: 'application/json', buffer: Buffer.from('{"text":"متن شخصی"}') });
+  await expect(page.locator('#corpus-text')).toHaveValue('متن شخصی');
+  await page.locator('#corpus-file').setInputFiles({ name: 'bad.jsonl', mimeType: 'application/json', buffer: Buffer.from('invalid') });
+  await expect(page.locator('#corpus-import-status')).toContainText('JSON نامعتبر');
+  await expect(page.locator('#corpus-text')).toHaveValue('متن شخصی');
+});
