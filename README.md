@@ -1,47 +1,51 @@
-# متن‌نما — Persian NLP Studio
+# متن‌نما · Persian NLP Studio
 
-A privacy-first Persian text analysis web app. **Release candidate v0.1.0.**
+**A privacy-first, browser-based suite of Persian text tools.** This is a product with its own original source and Git history—not a copy of past class assignments or datasets.
 
-This is an independently created product repository. It is **not** the historical university coursework repository; no inherited notebooks, research datasets, model files or old Git history have been copied into it.
+## Use the product
 
-## Features
+Open `index.html` from a local HTTP server for the original text analyzer or go to `tools.html` for five additional tools.
 
-- Persian text normalization (Arabic/Persian letter forms, diacritics, limited whitespace).
-- Word, unique word, character, line and approximate sentence statistics.
-- Frequent-word visualization in the browser.
-- Lexical (Jaccard) overlap between two texts, **not semantic similarity**.
-- Local downloadable JSON containing **aggregate numeric metrics only**, never source text or extracted words.
-- Responsive Persian RTL interface with no backend, telemetry, account or external runtime dependencies.
+| Tool | What is implemented | What it does *not* claim |
+| --- | --- | --- |
+| Text analyzer | Persian normalization, characters, words, common-word chart, Jaccard lexical comparison, numeric-only JSON | Semantic embeddings or grammatical correctness |
+| **Corpus Explorer** | Text search with context snippets and frequent word bigrams | Licensed search index or automatic crawling |
+| **He-Kasreh Review** | Detection of selected orthographic variants with optional alternative spellings | Trained correction, error certainty or auto-editing |
+| **Generic Name Lookup** | Tiny original spelling-only list, Persian/English queries, prefix and fuzzy matching | Comprehensive pharmaceutical database, verified equivalence, diagnosis or advice |
+| **Sentiment Evidence** | Small transparent positive/negative word list, film-aspect scope, simple negation rule | Validated sentiment classifier or reliable inference of someone's opinion |
+| **Verse Explorer** | Line counts, repeated written endings and word frequency | Prosodic meter, validated rhyme scheme, pretrained poetry generation or style transfer |
 
-This version **does not** implement learned sentiment prediction, He-Kasreh correction, medicine extraction, style transfer, AI text generation or semantic language understanding.
+Every entry is a **working local feature**, not a placeholder, but the methods are heuristic rather than trained ML. Do not use the medicine lookup for medical decisions.
 
-## Run
+## Run locally
 
-With Python 3:
+Python 3, no production dependencies:
 
-```sh
+```bash
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8765/. No package installation is required to use the browser app.
+Open `http://127.0.0.1:8765/` and `http://127.0.0.1:8765/tools.html`. The site does not upload entered text or track users. Static hosting may separately log ordinary site requests.
 
-## Test
+## Verify
 
 Node.js 22+:
 
-```sh
+```bash
 npm run check
 npm test
 ```
 
-GitHub Actions runs these checks and Chromium browser acceptance tests.
+CI also tests the real Chromium browser on desktop and mobile viewport sizes. The browser-testing packages are development-only; the deployed website has no remote runtime assets.
 
-## Documentation
+## Code, privacy and rights
 
-Read [Privacy](PRIVACY.md), [Security](SECURITY.md), [License](LICENSE) and the [Public release checklist](RELEASE_CHECKLIST.md).
+All frontend logic lives in `src/`. The names in the small generic-name list are common nonproprietary spellings, selected independently; no external medical dataset has been copied. Sample text was authored for this product.
 
-Text statistics are deterministic but linguistically approximate. The product is not medical, legal or clinical advice. The MIT product license does not cover unrelated academic works or datasets.
+The repository contains no academic datasets, original trained models, classroom notebooks, historical reports or old Git history. The original private source-of-research remains independently managed and is **not** a dependency.
 
-## Public site
+Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE) and [feature scope and next steps](FEATURE_SCOPE.md).
 
-A GitHub Pages workflow is included. The site is public only after the repository visibility, Pages settings and actual deployment are verified. Do not assume a URL is live until checked.
+## Hosting
+
+The `pages.yml` workflow assembles an allowlisted static site on `master`, *only for a public repo*. A live URL must be confirmed from GitHub Pages workflow evidence, not assumed.

@@ -1,9 +1,11 @@
 # Privacy notice / حریم خصوصی
 
-Text is processed locally in your browser. The application has no login, analytics, advertising, server API, cookies or application storage. It does not transmit user-entered text to a server. Entered text remains in the active page's memory.
+All six tools run locally inside the user's browser. The application has no account, server API, analytics, advertising, cookies or persistent browser storage. Text entered into analyzers, concordance, orthography review, name lookup, sentiment review or verse explorer is **not transmitted** from the app.
 
-The JSON export uses an explicit numeric-only field allowlist; it excludes original text, token lists, word frequencies and extracted words. The interface displays word frequencies locally.
+The JSON export in the main text analyzer has an explicit integer-metric allowlist. It excludes source text, word lists, extracted names and frequency words. The other modules show output only in the page and do not persist it.
 
-The static hosting provider (such as GitHub Pages) can see ordinary site requests and may retain connection metadata according to its own policies. Browser extensions, local malware, compromised devices and browser features are outside this application's control. For sensitive content, use a trusted device/browser.
+The tiny generic-name spelling list and the locally authored examples are packaged with the static app. No API-based external lookup, medical records, protected research corpus or remote model is loaded.
 
-The tool provides heuristic text statistics and is not a validated semantic or clinical model.
+**Host logs:** A static web host such as GitHub Pages may record standard requests for the site assets (IP address, user agent, timestamps). This is not a guarantee that loading the website uses no network. Browsers, extensions and compromised devices may have independent access to user input.
+
+**Limitations:** The generated statistics are heuristic. The medicine-name module does not provide treatment advice; sentiment evidence and poetic ending detection are not validated AI predictions.
