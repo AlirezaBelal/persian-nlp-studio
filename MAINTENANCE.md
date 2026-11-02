@@ -32,3 +32,18 @@ All publicly deployed modules run in the browser and are lexical or rule-based. 
 ## Durable agent instructions
 
 `AGENTS.md` documents repository-wide safety and quality rules. `.agents/skills/persian-nlp-github-maintainer/SKILL.md` packages the GitHub review/cleanup/CI/Pages workflow for Codex-compatible agents; it does not connect a GitHub account or automatically grant permissions.
+
+## Retirement checklist
+
+Retirement of a separate private research repository is blocked until all items below have evidence:
+
+- [ ] Inventory every branch/tag, commit tip, file/blob, LFS object and submodule; preserve unique code, checkpoints, preprocessing, evaluation splits and provenance.
+- [ ] Map each asset to retained-private backup, verified public replacement or separately authorized disposal. Lexical tools and model smoke runs do not replace trained pipelines or research datasets.
+- [ ] Review per-component licenses and collaborator attribution; preserve required notices. Never include the private inventory, customer/student identifiers or restricted assets in a public PR.
+- [ ] Create an encrypted off-repository Git mirror/bundle and separate exports for Issues/PR discussions, release attachments, wiki and required configuration. Never export plaintext secrets into a report.
+- [ ] Record SHA-256 checksums and verify that the backup includes LFS/submodule content, not only pointers. Keep two independently stored copies under owner control.
+- [ ] Restore into an isolated directory without the original remote; run git fsck, compare refs and file hashes, and verify representative large model/data files. Record actual commands, results and missing items.
+- [ ] Confirm remaining consumers, links, workflows and provenance references will not break. Deletion removes collaboration/history context and may not be reversible.
+- [ ] Obtain separate explicit owner approval naming the exact repository and irreversible action. No deletion, emptying, archive or visibility change is implied by this checklist.
+
+A failed Git clone or a metadata-only inventory is not a backup. Until restore verification succeeds, retirement remains unsafe.
