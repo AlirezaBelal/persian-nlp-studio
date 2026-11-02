@@ -45,7 +45,7 @@
         <div class="tool-heading"><span>۰۱ / کاوش متون</span><h2 id="corpus-title">پیکره‌کاو</h2><p>عبارت دلخواهت را در متن پیدا کن و واژه‌های دوتایی پرتکرار را ببین.</p></div>
         <div class="panel tool-panel">
           <div class="two-inputs">
-            <div><label for="corpus-text">متن برای جست‌وجو</label><textarea id="corpus-text" maxlength="20000" rows="5" placeholder="متن خود را وارد کن…"></textarea></div>
+            <div><label for="corpus-file">ورود فایل شخصی TXT یا JSONL با فیلد text (UTF-8)</label><input id="corpus-file" type="file" accept=".txt,.jsonl"><p id="corpus-import-status" role="status">فقط فایل‌هایی را وارد کنید که اجازهٔ پردازش آن‌ها را دارید. فایل ارسال یا ذخیره نمی‌شود.</p><label for="corpus-text">متن برای جست‌وجو</label><textarea id="corpus-text" maxlength="20000" rows="5" placeholder="متن خود را وارد کن…"></textarea></div>
             <div class="tool-aside"><label for="corpus-query">عبارت مورد جست‌وجو</label><input id="corpus-query" maxlength="100" type="text" placeholder="مثلاً فارسی" autocomplete="off"><button class="btn btn-outline sample" type="button" data-sample="corpus">نمونهٔ ساختگی</button><p class="hint">عبارت به‌صورت واژگانی و بدون درک مفهوم پیدا می‌شود.</p></div>
           </div>
           <div class="tool-result" aria-live="polite">
