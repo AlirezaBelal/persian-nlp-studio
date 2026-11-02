@@ -1,6 +1,6 @@
 # Privacy notice / حریم خصوصی
 
-All six tools run locally inside the user's browser. The application has no account, server API, analytics, advertising, cookies or persistent browser storage. Text entered into analyzers, concordance, orthography review, name lookup, sentiment review or verse explorer is **not transmitted** from the app.
+All six tools run locally inside the user's browser. The application has no account, server API, analytics, advertising, cookies or persistent browser storage. Text entered into analyzers, concordance, orthography review, name lookup, sentiment review or verse explorer is **not transmitted** from the app. Files selected for local TXT/JSONL corpus import are read in browser memory only and are not uploaded or persisted.
 
 The JSON export in the main text analyzer has an explicit integer-metric allowlist. It excludes source text, word lists, extracted names and frequency words. The other modules show output only in the page and do not persist it.
 
