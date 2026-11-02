@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 — 2026-11-02
+
+- Add local file import for UTF-8 TXT and JSONL corpora to the existing corpus explorer.
+- Validate file format, byte length, JSONL record count, UTF-16 output length and encoding.
+- Retain existing text after a failed file import.
+- Keep the separate ML experiments in the unmerged draft PR #4; this release does not deploy a model API.
+
 ## 0.2.0 — 2026-11-02
 
 - Add five independent, browser-local Persian text utilities: corpus concordance, he-kasreh spelling review, generic name lookup, sentiment lexicon evidence, and poetic structure review.
