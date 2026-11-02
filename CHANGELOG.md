@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — maintenance and repository hygiene
+
+- Add project-scoped GitHub/Codex maintenance skill and root agent guidance.
+- Normalize product-facing terminology, documentation, and release acceptance gates.
+- Add regression tests for skill metadata, Pages asset dependencies, and branding hygiene.
+- Do not alter the application's public inference behavior or add external data flows.
+
 ## 0.2.1 — 2026-11-02
 
 - Add local file import for UTF-8 TXT and JSONL corpora to the existing corpus explorer.
