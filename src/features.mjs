@@ -1,7 +1,7 @@
 /**
  * Independent, deterministic Persian text tools.
  *
- * No proprietary course code, pretrained weights, FDA / WHO data, university
+ * No third-party restricted source, pretrained weights, medical regulatory
  * datasets, personal information or unlicensed scraped corpora are included.
  * These are explainable lexical utilities, NOT validated ML predictors.
  */
