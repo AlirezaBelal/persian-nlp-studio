@@ -32,3 +32,19 @@ test("export's source function explicitly allowlists metrics and excludes word f
   assert.doesNotMatch(marker, /topWords|rawText|originalText|tokenize\(/);
   assert.match(marker, /Number\.isSafeInteger/);
 });
+
+test("five new tools remain self-contained, offline, and accessible", () => {
+  const toolsPage = readFileSync(new URL("../tools.html", import.meta.url), "utf8");
+  const toolsApp = readFileSync(new URL("../src/tools.mjs", import.meta.url), "utf8");
+  const toolEngine = readFileSync(new URL("../src/features.mjs", import.meta.url), "utf8");
+  const pagesFlow = readFileSync(new URL("../.github/workflows/pages.yml", import.meta.url), "utf8");
+  assert.match(toolsPage, /<html lang="fa" dir="rtl">/);
+  assert.match(toolsPage, /connect-src 'none'/);
+  assert.match(toolsPage, /id="medicine-query"/);
+  assert.match(toolsPage, /id="sentiment-aspect"/);
+  assert.match(toolsPage, /id="poetry-text"/);
+  assert.match(pagesFlow, /cp index.html tools.html styles.css tools.css/);
+  assert.match(pagesFlow, /src\/features.mjs/);
+  assert.doesNotMatch(toolsApp, /\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage|innerHTML/);
+  assert.doesNotMatch(toolEngine, /\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage/);
+});
