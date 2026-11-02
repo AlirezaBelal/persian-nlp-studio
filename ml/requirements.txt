@@ -1,0 +1,4 @@
+# Install CPU PyTorch separately from its official CPU wheel index.
+torch==2.8.0
+transformers==4.57.1
+safetensors==0.6.2
