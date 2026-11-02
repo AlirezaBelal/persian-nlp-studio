@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+- Run source validation before Pages packaging.
+- Document backup, restore and explicit-approval gates for private-repository retirement.
+
 ## Unreleased — maintenance and repository hygiene
 
 - Add project-scoped GitHub/Codex maintenance skill and root agent guidance.
