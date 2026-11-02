@@ -1,3 +1,4 @@
+import { importCorpus, MAX_IMPORT_BYTES } from "./corpus-import.mjs";
 import {
   corpusExplorer, heKasrehReview, medicineNameLookup, sentimentEvidence,
   poetryStructure, moduleSamples
@@ -96,3 +97,22 @@ for(const btn of document.querySelectorAll("[data-sample]")){
   });
 }
 for(const update of [updateCorpus,updateHeKasreh,updateMedicine,updateSentiment,updatePoetry])update();
+
+let importSequence = 0;
+$("corpus-file").addEventListener("change", async event => {
+  const sequence = ++importSequence;
+  const file = event.target.files?.[0];
+  if (!file) return;
+  const status = $("corpus-import-status");
+  try {
+    if (file.size > MAX_IMPORT_BYTES) throw new RangeError("فایل بیش از حد بزرگ است.");
+    status.textContent = "در حال خواندن فایل محلی…";
+    const content = importCorpus(new Uint8Array(await file.arrayBuffer()), file.name.toLowerCase().endsWith('.jsonl') ? 'jsonl' : 'text');
+    if (sequence !== importSequence) return;
+    $("corpus-text").value = content;
+    updateCorpus();
+    status.textContent = "فایل به‌صورت محلی خوانده شد؛ متن قبلی جایگزین شد.";
+  } catch (error) {
+    if (sequence === importSequence) status.textContent = error.message;
+  } finally { if (sequence === importSequence) event.target.value = ""; }
+});

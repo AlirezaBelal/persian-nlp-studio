@@ -9,7 +9,7 @@ Open `index.html` from a local HTTP server for the original text analyzer or go 
 | Tool | What is implemented | What it does *not* claim |
 | --- | --- | --- |
 | Text analyzer | Persian normalization, characters, words, common-word chart, Jaccard lexical comparison, numeric-only JSON | Semantic embeddings or grammatical correctness |
-| **Corpus Explorer** | Text search with context snippets and frequent word bigrams | Licensed search index or automatic crawling |
+| **Corpus Explorer** | Local UTF-8 TXT/JSONL import, text search with context snippets and frequent word bigrams | Licensed search index, automatic crawling or server-side ingestion |
 | **He-Kasreh Review** | Detection of selected orthographic variants with optional alternative spellings | Trained correction, error certainty or auto-editing |
 | **Generic Name Lookup** | Tiny original spelling-only list, Persian/English queries, prefix and fuzzy matching | Comprehensive pharmaceutical database, verified equivalence, diagnosis or advice |
 | **Sentiment Evidence** | Small transparent positive/negative word list, film-aspect scope, simple negation rule | Validated sentiment classifier or reliable inference of someone's opinion |
@@ -25,7 +25,7 @@ Python 3, no production dependencies:
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8765/` and `http://127.0.0.1:8765/tools.html`. The site does not upload entered text or track users. Static hosting may separately log ordinary site requests.
+Open `http://127.0.0.1:8765/` and `http://127.0.0.1:8765/tools.html`. The site does not upload entered text or track users. TXT and JSONL corpus import reads user-owned local files entirely in the browser; limits: 80,000 input bytes, 1,000 nonblank JSONL records, and 20,000 UTF-16 text units. Static hosting may separately log ordinary site requests.
 
 ## Verify
 

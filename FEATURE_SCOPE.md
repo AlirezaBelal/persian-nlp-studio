@@ -4,7 +4,7 @@ All modules below are independently implemented, client-side tools. The product 
 
 | Product module | Implemented now | If pursuing trained-model functionality later |
 | --- | --- | --- |
-| Corpus Explorer | Local phrase search, context preview, repeated bigrams | Obtain a lawful source corpus and establish ingestion consent, fair-use boundaries, attribution and anti-abuse rules |
+| Corpus Explorer | User-owned TXT/JSONL import, local phrase search, context preview, repeated bigrams | Obtain a lawful source corpus and establish ingestion consent, fair-use boundaries, attribution and anti-abuse rules |
 | Orthography Review | Selected `ه + ی` variants flagged for human review | New consented labeled dataset, reproducible evaluation, manual gold-set and false-positive control |
 | Generic Name Lookup | Small handwritten generic spelling index, Persian/English and typo search | Check authoritative datasets' redistribution rights, versioning, ambiguity and clinical safety review; **no clinical claims** |
 | Sentiment Evidence | Interpretable positive/negative lexical markers, limited movie-aspect window, simple negation | Independently train or license suitable model and evaluation set, measure per-aspect precision/recall on held-out Persian text |
