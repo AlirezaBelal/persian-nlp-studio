@@ -33,9 +33,10 @@ jobs:
       - name: Stage allowlisted site files
         run: |
           set -euo pipefail
-          mkdir -p _site/src
-          cp index.html tools.html styles.css tools.css favicon.svg _site/
-          cp src/app.mjs src/engine.mjs src/tools.mjs src/features.mjs src/corpus-import.mjs _site/src/
+          mkdir -p _site/src _site/assets/fonts
+          cp index.html tools.html styles.css tools.css unified.css favicon.svg _site/
+          cp src/app.mjs src/engine.mjs src/tools.mjs src/features.mjs src/corpus-import.mjs src/legacy-redirect.mjs _site/src/
+          cp assets/fonts/Vazirmatn-Variable.woff2 _site/assets/fonts/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v4
         with:
