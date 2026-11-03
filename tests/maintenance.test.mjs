@@ -41,10 +41,13 @@ test("the release manifest includes every local browser script import", () => {
     assert.ok(existsSync(new URL("../" + path, import.meta.url)), path);
     assert.ok(flow.includes(path), "Missing Pages artifact dependency: " + path);
   }
-  assert.match(flow, /cp index\.html tools\.html styles\.css tools\.css favicon\.svg _site\//);
+  assert.match(flow, /cp index\.html tools\.html styles\.css tools\.css unified\.css favicon\.svg _site\//);
+  assert.match(flow, /src\/legacy-redirect\.mjs/);
+  assert.match(flow, /assets\/fonts\/Vazirmatn-Variable\.woff2/);
   assert.match(flow, /github\.run_attempt/);
   assert.match(page, /src\/app\.mjs/);
-  assert.match(toolsPage, /src\/tools\.mjs/);
+  assert.match(page, /src\/tools\.mjs/);
+  assert.match(toolsPage, /src\/legacy-redirect\.mjs/);
 });
 
 test("public product landing page has no old institutional positioning", () => {
