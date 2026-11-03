@@ -1,129 +1,333 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#091726">
-  <meta name="description" content="آزمایشگاه آفلاین و تعاملی برای بررسی واژه‌ها و مقایسهٔ متون فارسی.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
-  <title>آزمایشگاه متن فارسی | Persian NLP Studio</title>
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-  <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./src/app.mjs"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="آزمایشگاه متن فارسی">
-        <span class="brand-icon" aria-hidden="true">فا</span>
-        <span><strong>متن‌نما</strong><small>Persian NLP Studio</small></span>
-      </a>
-      <nav class="nav" aria-label="بخش‌های محصول">
-        <a href="#analyzer">تحلیل متن</a>
-        <a href="#compare">مقایسه</a>
-        <a href="./tools.html">۵ ابزار دیگر</a>
-        <a href="#about">دربارهٔ ابزار</a>
-      </nav>
-      <span class="privacy-indicator"><span aria-hidden="true">●</span> پردازش محلی</span>
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <meta
+      name="description"
+      content="متن‌نما؛ فضای کار خصوصی برای تحلیل، مقایسه و کاوش متن فارسی در مرورگر شما."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <title>تحلیل متن · متن‌نما | Persian NLP Studio</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
 
-    <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <span class="eyebrow">متن‌نما · مجموعهٔ ابزارهای فارسی · نسخهٔ ۰.۲</span>
-          <h1 id="hero-title">متن فارسی را <span>شفاف‌تر</span> ببین.</h1>
-          <p>آمار واژه‌ها را بررسی کن، رسم‌الخط را یکدست کن و دو نوشته را از نظر واژگان مقایسه کن؛ بدون ثبت‌نام، بدون ارسال متن به سرور و بدون ادعای تحلیل هوشمندِ تأییدنشده.</p>
-          <div class="hero-actions">
-            <a class="primary-link" href="#analyzer">شروع تحلیل <span aria-hidden="true">↙</span></a>
-            <a class="secondary-link" href="./tools.html">کاوش پنج ابزار تخصصی</a>
-          </div>
-          <div class="hero-facts" aria-label="ویژگی‌های اصلی">
-            <span><span aria-hidden="true">✓</span> بدون نیاز به اینترنت پس از بارگذاری</span>
-            <span><span aria-hidden="true">✓</span> مناسب فارسی و نیم‌فاصله</span>
-            <span><span aria-hidden="true">✓</span> خروجی JSON محلی</span>
-          </div>
+    <script type="module" src="./src/app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="ناوبری اصلی">
+        <a class="brand" href="./index.html"
+          ><span class="brand-icon" aria-hidden="true">نـ</span
+          ><span
+            ><strong>متن‌نما</strong
+            ><small lang="en" dir="ltr">PERSIAN NLP STUDIO</small></span
+          ></a
+        >
+        <div class="sidebar-label">فضای کار شما</div>
+        <nav class="nav" aria-label="بخش‌های محصول">
+          <a href="./index.html" aria-current="page"
+            ><span class="nav-icon" aria-hidden="true">≋</span
+            ><span>تحلیل متن<small>آمار، یکدست‌سازی و مقایسه</small></span></a
+          >
+          <a href="./tools.html"
+            ><span class="nav-icon" aria-hidden="true">⌘</span
+            ><span>جعبه‌ابزار<small>پنج نگاه متفاوت به متن</small></span
+            ><span class="nav-count">۵</span></a
+          >
+        </nav>
+        <div class="sidebar-note">
+          <span class="lock-icon" aria-hidden="true">✓</span
+          ><strong>متن شما، نزد شما.</strong>
+          <p>
+            بدون حساب کاربری و ارسال متن به سرور. پردازش در همین مرورگر انجام
+            می‌شود.
+          </p>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-grid"></div>
-          <div class="art-card art-card-back"><span>آ / ب / پ</span><div class="art-line"></div><div class="art-line short"></div></div>
-          <div class="art-card art-card-front">
-            <div class="art-pulse"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <strong>واژه‌ها، الگوها، معنا</strong>
-            <small>نمایش آماری · بدون مدل ML</small>
+        <a class="sidebar-help" href="#about"
+          >دربارهٔ روش‌ها و حریم خصوصی <span aria-hidden="true">↗</span></a
+        >
+        <div class="sidebar-bottom">
+          <span class="status-dot" aria-hidden="true"></span> فضای کار محلی
+          <span>نسخهٔ ۰.۳</span>
+        </div>
+      </aside>
+      <div class="page-shell">
+        <header class="topbar">
+          <div class="breadcrumb">
+            فضای کار <span aria-hidden="true">/</span>
+            <strong>تحلیل متن</strong>
           </div>
-          <div class="floating-letter">ن</div>
-        </div>
-      </section>
-
-      <section class="workspace" id="analyzer" aria-labelledby="analyzer-title">
-        <div class="section-head">
-          <div><span class="section-kicker">۰۱ / ابزار اصلی</span><h2 id="analyzer-title">تحلیل واژگانی</h2><p>متن خودت را وارد کن یا نمونهٔ ساختگی را امتحان کن.</p></div>
-          <span class="section-note">حداکثر ۲۰٬۰۰۰ نویسه</span>
-        </div>
-        <div class="analysis-grid">
-          <div class="panel input-panel">
-            <div class="panel-header"><label for="main-text">متن ورودی</label><span class="muted" id="input-length">۰ / ۲۰٬۰۰۰</span></div>
-            <textarea id="main-text" maxlength="20000" rows="11" spellcheck="false" placeholder="متن فارسی خود را اینجا بنویسید…" aria-describedby="input-help"></textarea>
-            <p class="hint" id="input-help">متن شما در مرورگر پردازش می‌شود و به هیچ سرویس خارجی ارسال نمی‌شود.</p>
-            <div class="actions">
-              <button id="sample-btn" class="btn btn-outline" type="button">نمونهٔ آزمایشی</button>
-              <button id="clear-btn" class="btn btn-ghost" type="button">پاک‌کردن</button>
-              <button id="export-btn" class="btn btn-primary" type="button" disabled>دریافت نتیجهٔ JSON</button>
+          <span class="privacy-indicator"
+            ><span class="status-dot" aria-hidden="true"></span> پردازش در
+            دستگاه شما</span
+          >
+        </header>
+        <main id="main" tabindex="-1">
+        <noscript class="script-notice">برای پردازش محلی متن، جاوااسکریپت مرورگر باید فعال باشد. راهنماها و بخش‌های ابزار بدون آن هم قابل‌خواندن‌اند.</noscript>
+          <section class="hero" aria-labelledby="hero-title">
+            <div>
+              <div class="eyebrow">
+                <span class="tiny-mark" aria-hidden="true">✳</span> کمی دقیق‌تر
+                به متن نگاه کن
+              </div>
+              <h1 id="hero-title">هر متن، <span>یک کشف تازه.</span></h1>
+              <p>
+                واژه‌ها را بشمار، نوشتار را یکدست کن و الگوهای نوشته‌ات را
+                ببین.<br class="desktop-break" />
+                همه‌چیز همین‌جا، در مرورگر تو.
+              </p>
             </div>
-          </div>
-          <div class="panel results-panel">
-            <div class="panel-header"><h3>نمای کلی</h3><span class="result-chip">آمار قطعی واژگانی</span></div>
-            <div class="metrics">
-              <div class="metric"><strong id="count-words">۰</strong><span>واژه</span></div>
-              <div class="metric"><strong id="count-unique">۰</strong><span>واژهٔ یکتا</span></div>
-              <div class="metric"><strong id="count-chars">۰</strong><span>نویسه</span></div>
-              <div class="metric"><strong id="count-lines">۰</strong><span>خط غیرخالی</span></div>
+            <a class="hero-shortcut" href="./tools.html"
+              ><span class="shortcut-icon" aria-hidden="true">↖</span
+              ><strong>به دنبال ابزار دیگری هستی؟</strong
+              ><span>پیکره‌کاو، بازبین نوشتار و سه ابزار دیگر</span></a
+            >
+          </section>
+          <nav class="workspace-nav" aria-label="دسترسی سریع">
+            <a class="selected" href="#analyzer">تحلیل و یکدست‌سازی</a
+            ><a href="#compare"
+              >مقایسهٔ دو متن <span aria-hidden="true">↙</span></a
+            ><span class="local-note">بدون ثبت‌نام. بدون ذخیرهٔ متن.</span>
+          </nav>
+          <section
+            class="workspace"
+            id="analyzer"
+            aria-labelledby="analyzer-title"
+          >
+            <div class="section-head">
+              <div>
+                <span class="section-kicker">۰۱ / از اینجا شروع کن</span>
+                <h2 id="analyzer-title">متنت را وارد کن.</h2>
+              </div>
+              <span class="section-note"
+                >نتیجه هم‌زمان با نوشتن به‌روز می‌شود</span
+              >
             </div>
-            <div class="frequency-header"><h3>واژه‌های پرتکرار</h3><span>۱۲ واژهٔ نخست</span></div>
-            <div id="frequencies" class="frequency-list" aria-live="polite"><p class="empty">برای دیدن واژه‌ها، متنی وارد کنید.</p></div>
-          </div>
-        </div>
-
-        <div class="panel normalized-panel">
-          <div class="panel-header"><h3>پیش‌نمایش متن یکدست‌شده</h3><span>«ي» به «ی» و «ك» به «ک» تبدیل می‌شوند</span></div>
-          <pre id="normalized-output" class="normalized-text" aria-live="polite">متن یکدست‌شده اینجا نمایش داده می‌شود.</pre>
-          <p class="hint">این تبدیل تنها یک پیش‌پردازش ساده است؛ ویرایش ادبی، تصحیح دستور زبان یا تشخیص نیم‌فاصلهٔ درست نیست.</p>
-        </div>
-      </section>
-
-      <section class="workspace compare-section" id="compare" aria-labelledby="compare-title">
-        <div class="section-head">
-          <div><span class="section-kicker">۰۲ / ابزار مکمل</span><h2 id="compare-title">مقایسهٔ دو متن</h2><p>میزان اشتراک واژگان یکتای دو متن را ببین؛ نه شباهت معنایی آن‌ها را.</p></div>
-        </div>
-        <div class="panel compare-panel">
-          <div class="two-inputs">
-            <div><label for="compare-a">متن اول</label><textarea id="compare-a" rows="6" maxlength="20000" placeholder="متن اول…"></textarea></div>
-            <div><label for="compare-b">متن دوم</label><textarea id="compare-b" rows="6" maxlength="20000" placeholder="متن دوم…"></textarea></div>
-          </div>
-          <div class="compare-result">
-            <div><span class="overlap-label">اشتراک واژگانی (Jaccard)</span><strong id="overlap-value">۰٪</strong><span class="muted" id="compare-counts">۰ واژهٔ مشترک</span></div>
-            <div class="overlap-visual" role="meter" aria-label="درصد اشتراک واژگان" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="overlap-meter"><span id="overlap-bar"></span></div>
-            <div><span class="muted">واژه‌های مشترک</span><p id="shared-words" class="shared-words">هنوز متنی برای مقایسه وارد نشده است.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about" id="about" aria-labelledby="about-title">
-        <div>
-          <span class="section-kicker">شفافیت محصول</span>
-          <h2 id="about-title">چه کاری انجام می‌دهد؟ چه کاری نه؟</h2>
-          <p>متن‌نما مجموعه‌ای از ابزارهای کاربردی پردازش متن فارسی است. آمار و مقایسهٔ واژگانی را در مرورگر انجام می‌دهد و قابلیت‌های مدل‌محورِ آموزش‌دیده را در این نسخه ارائه نمی‌کند.</p>
-        </div>
-        <div class="about-grid">
-          <article><span class="about-symbol" aria-hidden="true">✓</span><h3>آنچه واقعاً دارد</h3><p>یکدست‌سازی پایهٔ نویسه‌ها، شمارش واژه و خط، فراوانی کلمات و مقایسهٔ واژگانی قابل‌تکرار.</p></article>
-          <article><span class="about-symbol caution" aria-hidden="true">!</span><h3>آنچه ادعا نمی‌کند</h3><p>تحلیل احساسات، شناسایی نام دارو، اصلاح هوشمند متن، درک معنا یا تولید شعر با مدل زبانی در این نسخه وجود ندارد.</p></article>
-          <article><span class="about-symbol" aria-hidden="true">⌁</span><h3>حریم خصوصی</h3><p>پردازش و خروجی در دستگاه شما انجام می‌شود. ورودی‌ها به سرور ارسال یا در حافظهٔ دائمی مرورگر ذخیره نمی‌شوند.</p></article>
-        </div>
-      </section>
-    </main>
-    <footer class="footer"><span>متن‌نما · Persian NLP Studio</span><span>پردازش محلی متن — با توضیح شفاف محدودیت‌ها</span></footer>
-  </div>
-  <div class="sr-only" aria-live="polite" id="announcements"></div>
-</body>
+            <div class="analysis-grid">
+              <div class="editor-column">
+                <div class="panel input-panel">
+                  <div class="panel-header">
+                    <label for="main-text"
+                      ><span class="panel-symbol" aria-hidden="true">¶</span>
+                      متن شما</label
+                    ><span class="muted" id="input-length">۰ / ۲۰٬۰۰۰</span>
+                  </div>
+                  <textarea
+                    id="main-text"
+                    maxlength="20000"
+                    rows="10"
+                    spellcheck="false"
+                    placeholder="یک پاراگراف، یک یادداشت یا چند خط از نوشته‌ات…"
+                    aria-describedby="input-help"
+                  ></textarea>
+                  <div class="editor-bottom">
+                    <p class="hint" id="input-help">
+                      برای شروع، متن را بچسبان یا یک نمونه را امتحان کن.
+                    </p>
+                    <div class="actions">
+                      <button
+                        id="sample-btn"
+                        class="btn btn-outline"
+                        type="button"
+                      >
+                        <span aria-hidden="true">＋</span> متن نمونه</button
+                      ><button
+                        id="clear-btn"
+                        class="btn btn-ghost"
+                        type="button"
+                      >
+                        پاک‌کردن
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel normalized-panel">
+                  <div class="panel-header">
+                    <h3>نوشتار یکدست‌شده</h3>
+                    <button
+                      class="btn btn-ghost compact"
+                      id="copy-btn"
+                      type="button"
+                      disabled
+                    >
+                      کپی متن <span aria-hidden="true">⧉</span>
+                    </button>
+                  </div>
+                  <pre
+                    id="normalized-output" tabindex="0" role="region" aria-label="متن یکدست‌شده"
+                    class="normalized-text"
+                    aria-live="polite"
+                  >
+متن یکدست‌شده اینجا نمایش داده می‌شود.</pre
+                  >
+                  <p class="hint">
+                    یکدست‌سازی «ی» و «ک» و حذف اعراب؛ بدون تغییر خودکار نگارش یا
+                    معنای متن.
+                  </p>
+                </div>
+              </div>
+              <div class="panel results-panel">
+                <div class="panel-header">
+                  <h3>متن در یک نگاه</h3>
+                  <span class="result-chip" id="analysis-status"
+                    >آمادهٔ تحلیل</span
+                  >
+                </div>
+                <div class="metrics">
+                  <div class="metric">
+                    <span>تعداد واژه</span><strong id="count-words">۰</strong
+                    ><i aria-hidden="true"></i>
+                  </div>
+                  <div class="metric">
+                    <span>واژهٔ یکتا</span><strong id="count-unique">۰</strong
+                    ><i aria-hidden="true"></i>
+                  </div>
+                  <div class="metric">
+                    <span>نویسه</span><strong id="count-chars">۰</strong>
+                  </div>
+                  <div class="metric">
+                    <span>خط غیرخالی</span><strong id="count-lines">۰</strong>
+                  </div>
+                </div>
+                <div class="frequency-header">
+                  <h3>واژه‌های پرتکرار</h3>
+                  <span>۱۲ واژهٔ نخست</span>
+                </div>
+                <div id="frequencies" tabindex="0" role="region" aria-label="واژه‌های پرتکرار" class="frequency-list" aria-live="polite">
+                  <p class="empty">برای دیدن واژه‌ها، متنی وارد کنید.</p>
+                </div>
+                <div class="export-area">
+                  <button
+                    id="export-btn"
+                    class="btn btn-primary"
+                    type="button"
+                    disabled
+                  >
+                    دریافت گزارش آماری <span lang="en">JSON</span
+                    ><span aria-hidden="true">↓</span>
+                  </button>
+                  <p>فقط آمار عددی؛ بدون متن و فهرست واژه‌ها.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="compare-section"
+            id="compare"
+            aria-labelledby="compare-title"
+          >
+            <div class="section-head">
+              <div>
+                <span class="section-kicker">۰۲ / کنار هم ببین</span>
+                <h2 id="compare-title">دو متن، چقدر واژهٔ مشترک دارند؟</h2>
+              </div>
+              <span class="method-badge">مقایسهٔ واژگانی · Jaccard</span>
+            </div>
+            <div class="panel compare-panel">
+              <div class="two-inputs">
+                <div>
+                  <label for="compare-a"
+                    >متن اول <span>حداکثر ۲۰٬۰۰۰ نویسه</span></label
+                  ><textarea
+                    id="compare-a"
+                    rows="5"
+                    maxlength="20000"
+                    placeholder="نوشتهٔ اول را اینجا وارد کن…"
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="compare-b"
+                    >متن دوم <span>حداکثر ۲۰٬۰۰۰ نویسه</span></label
+                  ><textarea
+                    id="compare-b"
+                    rows="5"
+                    maxlength="20000"
+                    placeholder="و نوشتهٔ دوم را اینجا…"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="compare-result">
+                <div>
+                  <span class="overlap-label">اشتراک واژگان یکتا</span
+                  ><strong id="overlap-value">۰٪</strong
+                  ><span class="muted" id="compare-counts">۰ واژهٔ مشترک</span>
+                </div>
+                <div>
+                  <div
+                    class="overlap-visual"
+                    role="meter"
+                    aria-label="درصد اشتراک واژگان"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                    id="overlap-meter"
+                  >
+                    <span id="overlap-bar"></span>
+                  </div>
+                  <p class="hint">
+                    این عدد، اشتراک کلمات را نشان می‌دهد؛ نه شباهت معنایی.
+                  </p>
+                </div>
+                <div>
+                  <span class="muted">واژه‌های مشترک</span>
+                  <p id="shared-words" class="shared-words">
+                    برای شروع، هر دو متن را وارد کن.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="about" id="about" aria-labelledby="about-title">
+            <div class="about-intro">
+              <span class="section-kicker">شفاف، از ابتدا تا انتها</span>
+              <h2 id="about-title">ابزار روشن.<br />نتیجهٔ قابل‌بررسی.</h2>
+              <a href="./tools.html" class="text-link"
+                >رفتن به جعبه‌ابزار <span aria-hidden="true">←</span></a
+              >
+            </div>
+            <div class="about-grid">
+              <article>
+                <span class="about-symbol" aria-hidden="true">↳</span>
+                <h3>در مرورگر تو</h3>
+                <p>
+                  متن و فایل واردشده از طریق برنامه ارسال نمی‌شوند و بعد از بستن
+                  صفحه باقی نمی‌مانند. میزبان ممکن است درخواست‌های عادی بازدید
+                  را ثبت کند.
+                </p>
+              </article>
+              <article>
+                <span class="about-symbol" aria-hidden="true">≋</span>
+                <h3>روش‌های مشخص</h3>
+                <p>
+                  شمارش، یکدست‌سازی و مقایسهٔ واژگان. مدل یادگیری ماشین یا تحلیل
+                  معنایی در این نسخه اجرا نمی‌شود.
+                </p>
+              </article>
+              <article>
+                <span class="about-symbol" aria-hidden="true">↓</span>
+                <h3>خروجی بدون متن</h3>
+                <p>
+                  گزارش JSON فقط شاخص‌های عددی را نگه می‌دارد. ورودی و واژه‌های
+                  استخراج‌شده در آن نیستند.
+                </p>
+              </article>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <span>برای واژه‌هایی که اهمیت دارند.</span
+          ><span
+            >متن‌نما <span aria-hidden="true">·</span> ابزارهای محلی فارسی</span
+          >
+        </footer>
+      </div>
+    </div>
+    <div class="sr-only" role="status" id="announcements"></div>
+  </body>
 </html>

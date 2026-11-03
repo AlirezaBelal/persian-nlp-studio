@@ -35,17 +35,16 @@ All publicly deployed modules run in the browser and are lexical or rule-based. 
 
 ## Retirement checklist
 
-Retirement of a separate private research repository is blocked until all items below have evidence:
+The separately authorized legacy deletion is an owner decision, not an application dependency. The latest explicit owner instruction waives the previous backup prerequisite and authorizes deletion only after this redesign is merged and deployed. Do not claim that unique historical assets have been backed up, restored or replaced by trained models.
 
-- [ ] Inventory every branch/tag, commit tip, file/blob, LFS object and submodule; preserve unique code, checkpoints, preprocessing, evaluation splits and provenance.
-- [ ] Map each asset to retained-private backup, verified public replacement or separately authorized disposal. Lexical tools and model smoke runs do not replace trained pipelines or research datasets.
-- [ ] Review per-component licenses and collaborator attribution; preserve required notices. Never include the private inventory, customer/student identifiers or restricted assets in a public PR.
-- [ ] Create an encrypted off-repository Git mirror/bundle and separate exports for Issues/PR discussions, release attachments, wiki and required configuration. Never export plaintext secrets into a report.
-- [ ] Record SHA-256 checksums and verify that the backup includes LFS/submodule content, not only pointers. Keep two independently stored copies under owner control.
-- [ ] Restore into an isolated directory without the original remote; run git fsck, compare refs and file hashes, and verify representative large model/data files. Record actual commands, results and missing items.
-- [ ] Confirm remaining consumers, links, workflows and provenance references will not break. Deletion removes collaboration/history context and may not be reversible.
-- [ ] Obtain separate explicit owner approval naming the exact repository and irreversible action. No deletion, emptying, archive or visibility change is implied by this checklist.
+- Confirm the exact owner and repository identity immediately before the destructive request.
+- Verify public product CI, deployment and independent browser behavior first.
+- Delete only the explicitly named repository through authorized access; no archive or visibility substitute.
+- If the actual interface or permission blocks deletion, record the precise result. Do not request or expose tokens and do not alter unrelated repositories.
+- Record the actual outcome in release notes and the closure report; source documentation alone is not proof of deletion.
 
-A failed Git clone or a metadata-only inventory is not a backup. Until restore verification succeeds, retirement remains unsafe.
+## Interface verification
 
-Project skills: run `node scripts/setup-codex-skills.mjs --init`, then `node scripts/setup-codex-skills.mjs --check`. See [CODEX_SKILLS.md](CODEX_SKILLS.md) for license limitations, discovery evidence and safe invocation.
+The supported release has two pages with a shared mobile-first design system. Specialist workspaces use fragment navigation and preserve inputs in page memory, not persistent storage. Clipboard copying requires an explicit user action and has a clear unavailable fallback.
+
+Browser dependencies are CI/development only: `npm install --no-save --no-package-lock --ignore-scripts '@playwright/test@1.56.1' '@axe-core/playwright@4.14.0'`, then `npx playwright install chromium` and `npx playwright test --config=playwright.config.mjs`. The suite includes axe WCAG A/AA checks; this is not a certification of every accessibility criterion. No production dependency is installed.

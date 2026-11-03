@@ -21,14 +21,14 @@ test("corpus search and bigrams work",async ({page})=>{
   await expect(page.locator("#corpus-contexts .result-item")).toHaveCount(2);
 });
 test("orthography suggestions are reviews, not unrequested corrections",async ({page})=>{
-  await page.goto("/tools.html");
+  await page.goto("/tools.html#hekasreh");
   await page.locator('[data-sample="hekasreh"]').click();
   await expect(page.locator("#hekasreh-count")).toHaveText("۲");
   await expect(page.locator("#hekasreh-results")).toContainText("خانهٔ");
   await expect(page.locator("#hekasreh-text")).toHaveValue(/خانه ی زیبا/);
 });
 test("medicine lookup supports English and Persian; no treatment advice",async ({page})=>{
-  await page.goto("/tools.html");
+  await page.goto("/tools.html#medicine");
   await page.locator('[data-sample="medicine"]').click();
   await expect(page.locator("#medicine-results")).toContainText("Paracetamol");
   await page.locator("#medicine-query").fill("متفورمين");
@@ -36,7 +36,7 @@ test("medicine lookup supports English and Persian; no treatment advice",async (
   await expect(page.locator(".safety-note")).toContainText("تجویز");
 });
 test("word sentiment and aspect filter present lexical evidence only",async ({page})=>{
-  await page.goto("/tools.html");
+  await page.goto("/tools.html#sentiment");
   await page.locator('[data-sample="sentiment"]').click();
   await expect(page.locator("#sentiment-evidence")).toContainText("عالی");
   await page.locator("#sentiment-aspect").selectOption("music");
@@ -44,7 +44,7 @@ test("word sentiment and aspect filter present lexical evidence only",async ({pa
   await expect(page.locator("#sentiment-summary")).toContainText("مدل احساس‌سنجی نیستند");
 });
 test("poetry structure and endings are calculated from user text",async ({page})=>{
-  await page.goto("/tools.html");
+  await page.goto("/tools.html#poetry");
   await page.locator('[data-sample="poetry"]').click();
   await expect(page.locator("#poetry-metrics")).toContainText("۴");
   await expect(page.locator("#poetry-endings")).toContainText("ار");
@@ -59,8 +59,11 @@ test("entered text is never sent outside local origin; HTML stays inert",async (
   await page.locator("#corpus-text").fill(script+" سلام");
   await page.locator("#corpus-query").fill(script);
   await expect(page.locator("#corpus-contexts")).toContainText(script);
+  await page.locator('.tools-index a[href="#hekasreh"]').click();
   await page.locator("#hekasreh-text").fill(script);
+  await page.locator('.tools-index a[href="#sentiment"]').click();
   await page.locator("#sentiment-text").fill(script);
+  await page.locator('.tools-index a[href="#poetry"]').click();
   await page.locator("#poetry-text").fill(script);
   expect(dialogs).toBe(0);
   for(const r of requests){
