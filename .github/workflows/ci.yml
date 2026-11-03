@@ -19,6 +19,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Initialize and verify reviewed skill text
+        run: |
+          node scripts/setup-codex-skills.mjs --init
+          node scripts/setup-codex-skills.mjs
+          node scripts/setup-codex-skills.mjs --check
       - run: npm run check
       - run: npm test
       - name: Validate optional skills bootstrap syntax (do not execute)

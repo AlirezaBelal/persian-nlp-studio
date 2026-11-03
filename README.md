@@ -19,10 +19,10 @@ Every entry is a **working local feature**, not a placeholder, but the methods a
 
 ## Run locally
 
-Python 3, no production dependencies:
+Node.js 22+, no production dependencies:
 
 ```bash
-python3 -m http.server 8765 --bind 127.0.0.1
+node scripts/serve-product.mjs
 ```
 
 Open `http://127.0.0.1:8765/` and `http://127.0.0.1:8765/tools.html`. The site does not upload entered text or track users. TXT and JSONL corpus import reads user-owned local files entirely in the browser; limits: 80,000 input bytes, 1,000 nonblank JSONL records, and 20,000 UTF-16 text units. Static hosting may separately log ordinary site requests.
@@ -54,4 +54,6 @@ GitHub Pages reported a successful deployment of the current product line on 202
 - [Open the five-tool suite](https://alirezabelal.github.io/persian-nlp-studio/tools.html)
 - [View the successful Pages deployment workflow](https://github.com/AlirezaBelal/persian-nlp-studio/actions/runs/41519370501)
 
-The hosting URLs are evidenced by the GitHub deployment log; direct independent HTTP access from the assistant's execution environment was unavailable. Verify in your own browser if you need an external availability check.
+Deployment evidence is recorded in [PROJECT_AUDIT.md](PROJECT_AUDIT.md); verify the workflow and environment URL for the current master commit.
+
+Project skills: run `node scripts/setup-codex-skills.mjs --init`, then `node scripts/setup-codex-skills.mjs --check`. See [CODEX_SKILLS.md](CODEX_SKILLS.md) for license limitations, discovery evidence and safe invocation.

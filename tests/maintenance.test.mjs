@@ -7,7 +7,7 @@ const text = path => readFileSync(new URL(path, import.meta.url), "utf8");
 test("the external Codex skills collection is pinned and installed only by opt-in", () => {
   const modules = text("../.gitmodules");
   const docs = text("../CODEX_SKILLS.md");
-  const script = text("../scripts/setup-codex-skills.sh");
+  const script = text("../scripts/setup-codex-skills.mjs");
   const agents = text("../AGENTS.md");
   const maintenance = text("../MAINTENANCE.md");
   const readme = text("../README.md");
@@ -16,9 +16,6 @@ test("the external Codex skills collection is pinned and installed only by opt-i
   assert.match(modules, /url = https:\/\/github\.com\/am-will\/codex-skills\.git/);
   assert.ok(docs.includes(pin));
   assert.ok(script.includes(pin));
-  assert.match(script, /git -C "\$root" submodule update --init/);
-  assert.match(script, /gh skill install "\$source_dir" planner --from-local --agent codex --scope project/);
-  assert.match(script, /gh skill install "\$source_dir" frontend-responsive-ui --from-local --agent codex --scope project/);
   assert.match(agents, /CODEX_SKILLS\.md/);
   assert.match(agents, /npm run check/);
   assert.match(agents, /npm test/);

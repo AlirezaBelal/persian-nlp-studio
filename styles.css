@@ -151,3 +151,8 @@ textarea:focus { border-color: var(--mint); box-shadow: 0 0 0 3px #6ce7bb1e; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* Responsive skill audit: comfortable touch targets and readable text entry. */
+.btn, .nav a { min-height: 44px; min-width: 44px; }
+.nav a { display: inline-flex; align-items: center; }
+textarea, .tool-panel input, .tool-panel select { font-size: 1rem; }

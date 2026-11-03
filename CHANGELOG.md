@@ -43,3 +43,9 @@
 - Original static RTL UI and product-only public Git history.
 
 The public product contains no private historical datasets, original trained weights or notebooks.
+
+## 0.2.2 — 2026-11-03
+- Reproducible project-local Codex skill installation and real loader verification.
+- Responsive touch-target/readability improvements with five-width browser acceptance.
+- Node-only allowlisted local preview; no production dependencies.
+- Explicit audit of deferred ML work and blocked legacy backup/retirement.
