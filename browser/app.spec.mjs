@@ -41,10 +41,12 @@ test("comparison and controls work without sending entered text to a backend", a
   const requests = [];
   page.on("request", req => requests.push({ url: req.url(), method: req.method(), postData: req.postData() }));
   await page.goto("/");
+  await page.locator('#tool-index a[href="#compare"]').click();
   await page.locator("#compare-a").fill("سلام فارسی");
   await page.locator("#compare-b").fill("سلام دنیا");
   await expect(page.locator("#overlap-value")).toHaveText("۳۳٪");
   await expect(page.locator("#shared-words")).toContainText("سلام");
+  await page.locator('#tool-index a[href="#analyzer"]').click();
   await page.locator("#sample-btn").click();
   await expect(page.locator("#count-words")).not.toHaveText("۰");
   await page.locator("#clear-btn").click();
