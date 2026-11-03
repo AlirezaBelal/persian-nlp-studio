@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("five-tool dashboard is RTL, keyboard accessible, no horizontal scroll", async ({page})=>{
+test("unified seven-workspace dashboard is RTL, keyboard accessible, no horizontal scroll", async ({page})=>{
   const errors=[];
   page.on("pageerror",err=>errors.push(err.message));
   await page.goto("/tools.html");
@@ -8,7 +8,7 @@ test("five-tool dashboard is RTL, keyboard accessible, no horizontal scroll", as
   expect(await page.locator("html").getAttribute("dir")).toBe("rtl");
   await page.keyboard.press("Tab");
   await expect(page.locator(".skip-link")).toBeFocused();
-  await expect(page.locator(".tools-index a")).toHaveCount(5);
+  await expect(page.locator(".tools-index a")).toHaveCount(7);
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
   expect(overflow).toBe(false);
   expect(errors).toEqual([]);
