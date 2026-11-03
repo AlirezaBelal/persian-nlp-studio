@@ -4,7 +4,7 @@
 
 ## Use the product
 
-Open `index.html` from a local HTTP server for the original text analyzer or go to `tools.html` for five additional tools.
+**All seven tools live in one application at `index.html`.** The analyzer, comparison and specialist tools share a single workspace; switching tools preserves in-memory input. Old `/tools.html#tool` bookmarks redirect to the correct view.
 
 | Tool | What is implemented | What it does *not* claim |
 | --- | --- | --- |
@@ -25,7 +25,7 @@ Node.js 22+, no production dependencies:
 node scripts/serve-product.mjs
 ```
 
-Open `http://127.0.0.1:8765/` and `http://127.0.0.1:8765/tools.html`. The site does not upload entered text or track users. TXT and JSONL corpus import reads user-owned local files entirely in the browser; limits: 80,000 input bytes, 1,000 nonblank JSONL records, and 20,000 UTF-16 text units. Static hosting may separately log ordinary site requests.
+Open `http://127.0.0.1:8765/` (for example `/#corpus` or `/#medicine`). The site does not upload entered text or track users. TXT and JSONL corpus import reads user-owned local files entirely in the browser; limits: 80,000 input bytes, 1,000 nonblank JSONL records, and 20,000 UTF-16 text units. Static hosting may separately log ordinary site requests.
 
 ## Verify
 
@@ -36,7 +36,7 @@ npm run check
 npm test
 ```
 
-CI also tests the real Chromium browser on desktop and mobile viewport sizes. The browser-testing packages are development-only; the deployed website has no remote runtime assets.
+CI also tests the real Chromium browser on desktop and mobile viewport sizes. The browser-testing packages are development-only; the deployed website has no remote runtime assets. The bundled Vazirmatn font is served locally under the separate [SIL OFL 1.1 license](assets/fonts/OFL-Vazirmatn.txt).
 
 ## Code, privacy and rights
 
