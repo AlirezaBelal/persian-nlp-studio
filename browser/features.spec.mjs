@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test("unified seven-workspace dashboard is RTL, keyboard accessible, no horizontal scroll", async ({page})=>{
   const errors=[];
   page.on("pageerror",err=>errors.push(err.message));
-  await page.goto("/tools.html");
+  await page.goto("/");
   await expect(page).toHaveTitle(/Persian NLP Studio/);
   expect(await page.locator("html").getAttribute("dir")).toBe("rtl");
   await page.keyboard.press("Tab");
