@@ -10,7 +10,7 @@ This repository is the standalone **Persian NLP Studio / متن‌نما** produ
 
 ## Existing functionality
 - `index.html`, `src/engine.mjs`, `src/app.mjs`: lexical statistics, normalization, text comparison, numeric-only JSON output.
-- `tools.html`, `src/tools.mjs`, `src/features.mjs`: five transparent, local text utilities.
+- `index.html` and `src/tools.mjs`, `src/features.mjs`: seven integrated text workspaces. `tools.html` is a legacy deep-link redirect, not a separate product UI.
 - `src/corpus-import.mjs`: local, bounded UTF-8 TXT/JSONL import. It must be included in Pages static assets.
 - `ml/` (if proposed in a PR): separate local research experiments, **not** proof of production ML.
 

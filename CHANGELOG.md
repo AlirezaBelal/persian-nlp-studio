@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — unified seven-workspace product (0.4.0)
+
+- Bring text analysis, comparison and five specialty tools into one canonical application; browser history and inputs persist while changing views.
+- Preserve legacy `tools.html#tool` links through a same-origin redirect.
+- Apply a MohlatBan-inspired paper/ink/blue design system, with mobile-first navigation and accessible interaction.
+- Self-host original Vazirmatn font with its SIL OFL 1.1 attribution, without third-party runtime requests.
+- Update Pages and preview allowlists. Keep MohlatBan and the private research repository unchanged.
+- Include unified routing, typography and privacy regression tests.
+
+
 ## Unreleased — Codex skills integration
 
 - Replace the retired custom maintainer skill with a pinned `am-will/codex-skills` Git submodule.

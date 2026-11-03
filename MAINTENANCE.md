@@ -7,7 +7,7 @@ The public Persian NLP Studio repository contains the live product and its quali
 | Area | Source | Validation |
 |---|---|---|
 | General text analysis | `index.html`, `src/engine.mjs`, `src/app.mjs` | `tests/engine.test.mjs`, `browser/app.spec.mjs` |
-| Five text tools | `tools.html`, `src/features.mjs`, `src/tools.mjs` | `tests/features.test.mjs`, `browser/features.spec.mjs` |
+| Five text tools | `index.html` (unified UI), `src/features.mjs`, `src/tools.mjs` | `tests/features.test.mjs`, `browser/features.spec.mjs` |
 | Local file import | `src/corpus-import.mjs` | `tests/corpus-import.test.mjs`, browser import acceptance |
 | Layout and assets | `styles.css`, `tools.css`, `favicon.svg` | Desktop/mobile Chromium smoke checks |
 | Public deployment | `.github/workflows/pages.yml` | Successful deployment for the merged commit |
@@ -23,7 +23,7 @@ The public Persian NLP Studio repository contains the live product and its quali
 
 ## Deployment
 
-GitHub Pages serves a small allowlisted static artifact. Keep imports and the artifact manifest synchronized. On retries, the upload and deploy steps must use the same per-attempt unique artifact name. A green CI alone does not establish that the live site has updated.
+GitHub Pages serves a small allowlisted static artifact. `tools.html` redirects bookmarks to canonical `index.html#tool`; `unified.css` supplies the active design and `assets/fonts/Vazirmatn-Variable.woff2` is self-hosted under SIL OFL 1.1. Keep imports and the artifact manifest synchronized. On retries, the upload and deploy steps must use the same per-attempt unique artifact name. A green CI alone does not establish that the live site has updated.
 
 ## Local vs model-backed functionality
 
