@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: "./browser",
   testMatch: "**/*.spec.mjs",
   retries: 0,
+  workers: process.env.CI ? 2 : 4,
   reporter: "list",
   use: { browserName: "chromium", baseURL: "http://127.0.0.1:8765", trace: "retain-on-failure" },
   projects: [

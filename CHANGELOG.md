@@ -49,3 +49,11 @@ The public product contains no private historical datasets, original trained wei
 - Responsive touch-target/readability improvements with five-width browser acceptance.
 - Node-only allowlisted local preview; no production dependencies.
 - Explicit audit of deferred ML work and blocked legacy backup/retirement.
+
+## 0.3.0 — 2026-11-03
+- Rebuilt both pages as a light, Persian-first workspace with a shared responsive visual system.
+- Focused specialist navigation, direct links/history, retained page-memory input and per-tool clearing.
+- Explicit normalized-text copy with feedback; numeric-only JSON unchanged.
+- Improved empty states, local file guidance and stale-import protection.
+- Added keyboard, reflow and WCAG A/AA browser checks with CI-only axe; no runtime dependency.
+- Supersedes previous backup-gated retirement instructions with the owner's explicit current authorization; actual deletion outcome is recorded separately in release notes.

@@ -48,12 +48,15 @@ Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE), [featur
 
 ## Hosting
 
-GitHub Pages reported a successful deployment of the current product line on 2026-11-02:
-
 - [Open the public text analyzer](https://alirezabelal.github.io/persian-nlp-studio/)
-- [Open the five-tool suite](https://alirezabelal.github.io/persian-nlp-studio/tools.html)
-- [View the successful Pages deployment workflow](https://github.com/AlirezaBelal/persian-nlp-studio/actions/runs/41519370501)
+- [Open the specialist workspaces](https://alirezabelal.github.io/persian-nlp-studio/tools.html)
+- [Published releases](https://github.com/AlirezaBelal/persian-nlp-studio/releases)
+- [CI and deployment workflows](https://github.com/AlirezaBelal/persian-nlp-studio/actions)
 
-Deployment evidence is recorded in [PROJECT_AUDIT.md](PROJECT_AUDIT.md); verify the workflow and environment URL for the current master commit.
+## The v0.3 workspace
 
-Project skills: run `node scripts/setup-codex-skills.mjs --init`, then `node scripts/setup-codex-skills.mjs --check`. See [CODEX_SKILLS.md](CODEX_SKILLS.md) for license limitations, discovery evidence and safe invocation.
+A new Persian-first interface puts text entry, live metrics, frequency results and normalized output in clear work areas. JSON downloads still contain only numeric aggregate metrics. Copying normalized text is a separate, explicit action.
+
+Choose one of five specialist tools in the toolbox. Direct links such as `tools.html#poetry` open the requested workspace; browser back/forward works, and switching tools preserves inputs while the page remains open. Closing or reloading the page discards inputs. Each tool includes a sample and a clear action. The corpus picker reads local UTF-8 TXT/JSONL only; nothing is uploaded.
+
+The visual system uses local system fonts, lightweight CSS and no third-party runtime assets. Browser acceptance includes 320–1440px reflow, keyboard use, clipboard feedback, local import races, all existing feature/privacy flows and automated WCAG A/AA checks. See [redesign notes](REDESIGN.md) and [scope audit](PROJECT_AUDIT.md).

@@ -1,4 +1,10 @@
-import { analyzeText, compareTexts, normalizePersian, demoText, exportableMetrics } from "./engine.mjs";
+import {
+  analyzeText,
+  compareTexts,
+  normalizePersian,
+  demoText,
+  exportableMetrics,
+} from "./engine.mjs";
 
 const $ = (id) => document.getElementById(id);
 const nf = new Intl.NumberFormat("fa-IR");
@@ -33,7 +39,8 @@ function createFrequencyRow({ word, count }, max) {
 function updateAnalysis() {
   const value = mainInput.value;
   latestAnalysis = analyzeText(value);
-  $("input-length").textContent = `${nf.format(value.length)} / ${nf.format(20000)}`;
+  $("input-length").textContent =
+    `${nf.format(value.length)} / ${nf.format(20000)}`;
   setCount("count-words", latestAnalysis.words);
   setCount("count-unique", latestAnalysis.uniqueWords);
   setCount("count-chars", latestAnalysis.characters);
@@ -49,13 +56,20 @@ function updateAnalysis() {
   } else {
     const max = latestAnalysis.topWords[0].count;
     const fragment = document.createDocumentFragment();
-    latestAnalysis.topWords.forEach(entry => fragment.append(createFrequencyRow(entry, max)));
+    latestAnalysis.topWords.forEach((entry) =>
+      fragment.append(createFrequencyRow(entry, max)),
+    );
     frequencyList.append(fragment);
   }
 
   const normalized = normalizePersian(value);
-  $("normalized-output").textContent = normalized || "متن یکدست‌شده اینجا نمایش داده می‌شود.";
+  $("normalized-output").textContent =
+    normalized || "متن یکدست‌شده اینجا نمایش داده می‌شود.";
   $("export-btn").disabled = !normalized.trim();
+  $("copy-btn").disabled = !normalized.trim();
+  $("analysis-status").textContent = normalized.trim()
+    ? "به‌روز شد"
+    : "آمادهٔ تحلیل";
 }
 
 function updateComparison() {
@@ -64,7 +78,10 @@ function updateComparison() {
   $("compare-counts").textContent =
     `${nf.format(result.sharedCount)} واژهٔ مشترک از ${nf.format(result.leftUnique)} و ${nf.format(result.rightUnique)} واژهٔ یکتا`;
   $("overlap-bar").style.width = `${result.overlapPercent}%`;
-  $("overlap-meter").setAttribute("aria-valuenow", String(result.overlapPercent));
+  $("overlap-meter").setAttribute(
+    "aria-valuenow",
+    String(result.overlapPercent),
+  );
   $("shared-words").textContent = result.sharedWords.length
     ? result.sharedWords.join(" · ")
     : "واژهٔ مشترکی در این دو متن پیدا نشد.";
@@ -74,7 +91,9 @@ function exportAnalysis() {
   if (mainInput.value.trim().length === 0) return;
   // Export only computed metrics, never user-entered source text.
   const report = exportableMetrics(latestAnalysis);
-  const blob = new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" });
+  const blob = new Blob([JSON.stringify(report, null, 2)], {
+    type: "application/json;charset=utf-8",
+  });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
@@ -83,7 +102,8 @@ function exportAnalysis() {
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  $("announcements").textContent = "گزارش آماری دریافت شد؛ متن اصلی در فایل وجود ندارد.";
+  $("announcements").textContent =
+    "گزارش آماری دریافت شد؛ متن اصلی در فایل وجود ندارد.";
 }
 
 $("sample-btn").addEventListener("click", () => {
@@ -102,3 +122,17 @@ compareA.addEventListener("input", updateComparison);
 compareB.addEventListener("input", updateComparison);
 updateAnalysis();
 updateComparison();
+
+$("copy-btn").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(normalizePersian(mainInput.value));
+    $("announcements").textContent = "متن یکدست‌شده کپی شد.";
+    $("copy-btn").textContent = "کپی شد ✓";
+    setTimeout(() => {
+      $("copy-btn").textContent = "کپی متن ⧉";
+    }, 1800);
+  } catch {
+    $("announcements").textContent =
+      "کپی در این مرورگر در دسترس نیست؛ متن خروجی را انتخاب و کپی کن.";
+  }
+});
