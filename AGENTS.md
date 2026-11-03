@@ -31,9 +31,11 @@ Check the existing GitHub Actions `Product checks` workflow, including real Chro
 
 ## Codex skills
 
-The former custom maintainer skill has been retired. The externally maintained [am-will/codex-skills](https://github.com/am-will/codex-skills) collection is pinned as a Git submodule at `vendor/codex-skills`. See `CODEX_SKILLS.md` for the exact upstream SHA and the **optional**, project-local installation command.
+The former custom maintainer skill has been retired. The externally maintained [am-will/codex-skills](https://github.com/am-will/codex-skills) collection is pinned as a Git submodule at `vendor/codex-skills`. See `CODEX_SKILLS.md` for the exact upstream SHA and the project-local installation and verification commands.
 
 - Do not automatically run third-party install scripts, hooks, agents or network tools.
 - The default selections for an authorized manual setup are `planner` and `frontend-responsive-ui`.
 - No repository skill overrides the scope, privacy, accuracy, release or deletion rules above.
 - GitHub operations require an authorized account or connector; the external collection does not grant access.
+
+Project skills: run `node scripts/setup-codex-skills.mjs --init`, then `node scripts/setup-codex-skills.mjs --check`. See [CODEX_SKILLS.md](CODEX_SKILLS.md) for license limitations, discovery evidence and safe invocation.

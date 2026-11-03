@@ -11,7 +11,7 @@ export default defineConfig({
     { name: "mobile", use: { viewport: { width: 390, height: 844 }, isMobile: true, deviceScaleFactor: 1 } }
   ],
   webServer: {
-    command: "python3 -m http.server 8765 --bind 127.0.0.1",
+    command: "node scripts/serve-product.mjs",
     url: "http://127.0.0.1:8765/",
     reuseExistingServer: !process.env.CI,
     timeout: 20000

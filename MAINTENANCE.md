@@ -31,7 +31,7 @@ All publicly deployed modules run in the browser and are lexical or rule-based. 
 
 ## Durable agent instructions
 
-`AGENTS.md` retains the repository's safety and quality rules. `CODEX_SKILLS.md` documents the pinned external `am-will/codex-skills` Git submodule and an opt-in, project-local Codex setup. The old custom maintainer skill is no longer part of this repository. Installation is not automatic and does not grant account permissions.
+`AGENTS.md` retains the repository's safety and quality rules. `CODEX_SKILLS.md` documents the pinned external `am-will/codex-skills` Git submodule and a reproducible, project-local Codex setup. The old custom maintainer skill is no longer part of this repository. Run `node scripts/setup-codex-skills.mjs --init` once per checkout; CI verifies installation without invoking skills. Installation does not grant account permissions.
 
 ## Retirement checklist
 
@@ -47,3 +47,5 @@ Retirement of a separate private research repository is blocked until all items 
 - [ ] Obtain separate explicit owner approval naming the exact repository and irreversible action. No deletion, emptying, archive or visibility change is implied by this checklist.
 
 A failed Git clone or a metadata-only inventory is not a backup. Until restore verification succeeds, retirement remains unsafe.
+
+Project skills: run `node scripts/setup-codex-skills.mjs --init`, then `node scripts/setup-codex-skills.mjs --check`. See [CODEX_SKILLS.md](CODEX_SKILLS.md) for license limitations, discovery evidence and safe invocation.
