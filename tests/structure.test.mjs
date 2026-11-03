@@ -40,10 +40,10 @@ test("five new tools remain self-contained, offline, and accessible", () => {
   const pagesFlow = readFileSync(new URL("../.github/workflows/pages.yml", import.meta.url), "utf8");
   assert.match(toolsPage, /<html lang="fa" dir="rtl">/);
   assert.match(toolsPage, /connect-src 'none'/);
-  assert.match(toolsPage, /id="medicine-query"/);
-  assert.match(toolsPage, /id="sentiment-aspect"/);
-  assert.match(toolsPage, /id="poetry-text"/);
-  assert.match(pagesFlow, /cp index.html tools.html styles.css tools.css/);
+  assert.match(page, /id="medicine-query"/);
+  assert.match(page, /id="sentiment-aspect"/);
+  assert.match(page, /id="poetry-text"/);
+  assert.match(pagesFlow, /cp index.html tools.html styles.css tools.css unified.css/);
   assert.match(pagesFlow, /src\/features.mjs/);
   assert.doesNotMatch(toolsApp, /\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage|innerHTML/);
   assert.doesNotMatch(toolEngine, /\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage/);
@@ -55,7 +55,7 @@ test("Pages bundle includes all browser imports and retries use per-attempt arti
   const html = readFileSync(new URL("../tools.html", import.meta.url), "utf8");
   assert.match(toolsApp, /from ["']\.\/corpus-import\.mjs["']/);
   assert.match(pagesFlow, /src\/corpus-import\.mjs/);
-  assert.match(html, /id="corpus-file"/);
+  assert.match(readFileSync(new URL("../index.html", import.meta.url), "utf8"), /id="corpus-file"/);
   assert.match(pagesFlow, /name: pages-\$\{\{ github\.run_id \}\}-\$\{\{ github\.run_attempt \}\}/);
   assert.match(pagesFlow, /artifact_name: pages-\$\{\{ github\.run_id \}\}-\$\{\{ github\.run_attempt \}\}/);
 });
