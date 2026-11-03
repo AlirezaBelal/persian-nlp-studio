@@ -213,34 +213,61 @@ $("corpus-file").addEventListener("change", async (event) => {
   }
 });
 
-// Enhance in-page links into one focused workspace. Without JS all tools remain readable.
-const toolIds = ["corpus", "hekasreh", "medicine", "sentiment", "poetry"];
+// One real application: the analyzer, comparison and five specialist tools
+// share the same DOM and hold user inputs in memory while tabs change.
+const workspaceIds = [
+  "analyzer", "compare", "corpus", "hekasreh",
+  "medicine", "sentiment", "poetry",
+];
+const workspaces = new Set(workspaceIds);
+const labels = {
+  analyzer: "تحلیل متن", compare: "مقایسهٔ دو متن", corpus: "پیکره‌کاو",
+  hekasreh: "بازبین نوشتار", medicine: "نام‌یاب", sentiment: "احساس‌نما",
+  poetry: "شعرسنج",
+};
 const navigation = [...document.querySelectorAll(".tools-index a")];
-function showTool(id, focus = false) {
-  for (const name of toolIds) $(name).hidden = name !== id;
+const secondaryNavigation = [
+  ...document.querySelectorAll('.nav a[data-workspace], #tool-notice a[data-workspace]'),
+];
+function showWorkspace(id, focus = false) {
+  if (!workspaces.has(id)) return;
+  for (const name of workspaceIds) $(name).hidden = name !== id;
   for (const link of navigation) {
     if (link.hash === "#" + id) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
   }
+  const sidebarId = ["analyzer", "compare"].includes(id) ? id : "corpus";
+  for (const link of document.querySelectorAll('.nav a[data-workspace]')) {
+    if (link.dataset.workspace === sidebarId) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  }
+  const heading = $("active-workspace-name");
+  if (heading) heading.textContent = labels[id];
   if (focus) $(id).querySelector("h2").focus({ preventScroll: true });
 }
-for (const id of toolIds) $(id).querySelector("h2").tabIndex = -1;
-for (const link of navigation)
-  link.addEventListener("click", (event) => {
-    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
-      return;
-    event.preventDefault();
-    if (location.hash !== link.hash) history.pushState(null, "", link.hash);
-    showTool(link.hash.slice(1), true);
-  });
-function restoreTool() {
+for (const id of workspaceIds) $(id).querySelector("h2").tabIndex = -1;
+function activateLink(link, event) {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const id = link.hash.slice(1);
+  if (!workspaces.has(id)) return;
+  event.preventDefault();
+  if (location.hash !== link.hash) history.pushState(null, "", link.hash);
+  showWorkspace(id, true);
+  // On mobile the selected workspace starts below the horizontally scrollable tab bar.
+  // Do not scroll to a hidden section before revealing it.
+  $("tool-index").scrollIntoView({ block: "start" });
+}
+for (const link of [...navigation, ...secondaryNavigation])
+  link.addEventListener("click", (event) => activateLink(link, event));
+function restoreWorkspace() {
   const id = location.hash.slice(1);
-  showTool(toolIds.includes(id) ? id : "corpus");
+  showWorkspace(workspaces.has(id) ? id : "analyzer");
   if (id === "tool-notice") $("tool-notice").open = true;
 }
-window.addEventListener("popstate", restoreTool);
-window.addEventListener("hashchange", restoreTool);
-restoreTool();
+window.addEventListener("popstate", restoreWorkspace);
+window.addEventListener("hashchange", restoreWorkspace);
+restoreWorkspace();
+
 for (const button of document.querySelectorAll("[data-clear]"))
   button.addEventListener("click", () => {
     const id = button.getAttribute("data-clear");
