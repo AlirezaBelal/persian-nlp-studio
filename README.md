@@ -48,15 +48,20 @@ Read [privacy](PRIVACY.md), [security](SECURITY.md), [license](LICENSE), [featur
 
 ## Hosting
 
-- [Open the public text analyzer](https://alirezabelal.github.io/persian-nlp-studio/)
-- [Open the specialist workspaces](https://alirezabelal.github.io/persian-nlp-studio/tools.html)
+- [Open the unified Persian NLP Studio](https://alirezabelal.github.io/persian-nlp-studio/)
+- [Jump to corpus explorer](https://alirezabelal.github.io/persian-nlp-studio/#corpus)
+- [Jump to sentiment evidence](https://alirezabelal.github.io/persian-nlp-studio/#sentiment)
 - [Published releases](https://github.com/AlirezaBelal/persian-nlp-studio/releases)
-- [CI and deployment workflows](https://github.com/AlirezaBelal/persian-nlp-studio/actions)
+- [Current CI and Pages runs](https://github.com/AlirezaBelal/persian-nlp-studio/actions)
 
-## The v0.3 workspace
+## The unified v0.4 workspace
 
-A new Persian-first interface puts text entry, live metrics, frequency results and normalized output in clear work areas. JSON downloads still contain only numeric aggregate metrics. Copying normalized text is a separate, explicit action.
+Seven workspaces live in **one document** rather than separate analyzer/toolbox pages. The top navigation switches between text analysis, comparison, corpus import/search, writing review, name lookup, sentiment evidence and poetry structure.
 
-Choose one of five specialist tools in the toolbox. Direct links such as `tools.html#poetry` open the requested workspace; browser back/forward works, and switching tools preserves inputs while the page remains open. Closing or reloading the page discards inputs. Each tool includes a sample and a clear action. The corpus picker reads local UTF-8 TXT/JSONL only; nothing is uploaded.
+- Switching tools does not erase entered text. Browser back/forward and deep links use the same single page.
+- Refreshing or closing the page discards unsaved text. There is no backend or browser storage.
+- Old bookmarks such as `tools.html#poetry` redirect to `index.html#poetry`; the legacy page is not a separate UI.
+- Responsive design and self-hosted Persian typography follow the clarity principles of the owner's MohlatBan product. No MohlatBan source code or backend is required at runtime.
+- Import, export, keyboard, responsive and WCAG A/AA behavior remain covered by automated browser tests.
 
-The visual system uses local system fonts, lightweight CSS and no third-party runtime assets. Browser acceptance includes 320–1440px reflow, keyboard use, clipboard feedback, local import races, all existing feature/privacy flows and automated WCAG A/AA checks. See [redesign notes](REDESIGN.md) and [scope audit](PROJECT_AUDIT.md).
+The previous v0.3 redesign remains documented in [REDESIGN.md](REDESIGN.md). The present system is independently maintained in `unified.css`; ML limitations remain in [FEATURE_SCOPE.md](FEATURE_SCOPE.md).
