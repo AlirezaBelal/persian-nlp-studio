@@ -1,11 +1,11 @@
 {
   "name": "persian-nlp-studio",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check src/engine.mjs && node --check src/app.mjs && node --check src/features.mjs && node --check src/tools.mjs && node --check src/corpus-import.mjs && node --check scripts/setup-codex-skills.mjs && node --check scripts/serve-product.mjs && node --check scripts/verify-codex-discovery.mjs"
+    "check": "node --check src/engine.mjs && node --check src/app.mjs && node --check src/features.mjs && node --check src/tools.mjs && node --check src/legacy-redirect.mjs && node --check src/corpus-import.mjs && node --check scripts/setup-codex-skills.mjs && node --check scripts/serve-product.mjs && node --check scripts/verify-codex-discovery.mjs"
   },
   "engines": {
     "node": ">=22"
