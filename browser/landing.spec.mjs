@@ -53,20 +53,34 @@ test("creator, contact and footer use only verified identity and real public lin
     "https://github.com/AlirezaBelal",
   );
   await expect(page.locator("#creator .creator-name")).toContainText(
-    "Alireza Belal",
+    "علیرضا بلال",
   );
   await expect(page.locator(".contact-cta")).toHaveAttribute(
     "href",
-    "https://github.com/AlirezaBelal",
+    "https://alirezabelal.github.io/hi/",
   );
-  await expect(page.locator('#contact a[href$="/issues"]')).toHaveCount(1);
+  await expect(page.locator('#contact a[href*="github.com"]')).toHaveCount(0);
   await expect(
     page.locator('#contact form, a[href^="mailto:"], a[href*="t.me/"]'),
   ).toHaveCount(0);
   await expect(page.locator(".footer-bottom")).toContainText(
     "طراحی و توسعه توسط",
   );
-  await expect(page.locator(".footer-bottom")).toContainText("2026");
+  await expect(page.locator(".footer-bottom .copyright")).toHaveText(
+    "Copyright © 2026 Alireza Belal · TextNema",
+  );
+  await expect(page.locator(".footer-bottom .copyright")).toHaveAttribute(
+    "lang",
+    "en",
+  );
+  await expect(page.locator(".footer-bottom .copyright")).toHaveAttribute(
+    "dir",
+    "ltr",
+  );
+  await expect(page.locator(".footer-bottom .copyright")).not.toContainText(
+    /[\u0600-\u06ff]/,
+  );
+  await expect(page.locator(".footer-bottom a")).toContainText("علیرضا بلال");
   for (const id of ["features", "about", "creator", "privacy", "contact"])
     await expect(page.locator(`.footer-links a[href="#${id}"]`)).toHaveCount(1);
   for (const link of await page.locator('a[target="_blank"]').all()) {

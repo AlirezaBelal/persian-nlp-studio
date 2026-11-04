@@ -8,7 +8,7 @@ The original SVG mark combines a Persian letterform, a text baseline and a singl
 
 ## Verified creator and contact
 
-On 2026-11-04, the unauthenticated public GitHub API at `https://api.github.com/users/AlirezaBelal` returned display name **Alireza Belal**, profile `https://github.com/AlirezaBelal`, and `email: null`. The public profile independently confirmed the display name. The site credits that exact name. It publishes no email, guessed social handle, biography, qualifications or employment claim. Contact links open the verified GitHub profile and this repository's issue tracker; there is no form/backend. External links announce new tabs and use noopener/noreferrer.
+On 2026-11-04, the unauthenticated public GitHub API at `https://api.github.com/users/AlirezaBelal` returned display name **Alireza Belal**, profile `https://github.com/AlirezaBelal`, and `email: null`. The public profile independently confirmed the display name. The public English identity remains Alireza Belal; the owner subsequently confirmed the Persian spelling **علیرضا بلال** for Persian introduction and attribution. The copyright line is English-only: `Copyright © 2026 Alireza Belal · TextNema`, with explicit English language and LTR direction. It publishes no email, guessed social handle, biography, qualifications or employment claim. The owner subsequently designated `https://alirezabelal.github.io/hi/` as the contact destination. The contact CTA opens that personal contact page; GitHub links remain for creator identity and product source only. There is no form/backend. External links announce new tabs and use noopener/noreferrer.
 
 ## Privacy and rights
 
