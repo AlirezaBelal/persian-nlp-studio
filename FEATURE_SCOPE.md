@@ -10,7 +10,7 @@ All public-facing modules below are independently implemented client-side tools.
 | Sentiment Evidence | Interpretable positive/negative lexical markers, limited movie-aspect window, simple negation | Independently train or license suitable model and evaluation set, measure per-aspect precision/recall on held-out Persian text |
 | Verse Explorer | Line counts, approximate couplets, written two-character ending overlaps, word frequency | Obtain lawful text and model weights; validate poetic meter/rhyme and any generation or style-transfer claims |
 
-The sixth general-text module (the landing page) retains normalization, word stats, Jaccard overlap, and safe numeric-only JSON export.
+The two general-text workspaces provide normalization, word statistics and safe numeric-only JSON export in the analyzer, plus Jaccard lexical overlap in text comparison. Together with the five specialist tools above, they form seven workspaces in one application.
 
 ## User-visible safeguards
 
