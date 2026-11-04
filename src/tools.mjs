@@ -216,19 +216,26 @@ $("corpus-file").addEventListener("change", async (event) => {
 // One real application: the analyzer, comparison and five specialist tools
 // share the same DOM and hold user inputs in memory while tabs change.
 const workspaceIds = [
-  "analyzer", "compare", "corpus", "hekasreh",
-  "medicine", "sentiment", "poetry",
+  "analyzer",
+  "compare",
+  "corpus",
+  "hekasreh",
+  "medicine",
+  "sentiment",
+  "poetry",
 ];
 const workspaces = new Set(workspaceIds);
 const labels = {
-  analyzer: "تحلیل متن", compare: "مقایسهٔ دو متن", corpus: "پیکره‌کاو",
-  hekasreh: "بازبین نوشتار", medicine: "نام‌یاب", sentiment: "احساس‌نما",
+  analyzer: "تحلیل متن",
+  compare: "مقایسهٔ دو متن",
+  corpus: "پیکره‌کاو",
+  hekasreh: "بازبین نوشتار",
+  medicine: "نام‌یاب",
+  sentiment: "احساس‌نما",
   poetry: "شعرسنج",
 };
 const navigation = [...document.querySelectorAll(".tools-index a")];
-const secondaryNavigation = [
-  ...document.querySelectorAll('.nav a[data-workspace], #tool-notice a[data-workspace]'),
-];
+const secondaryNavigation = [...document.querySelectorAll("a[data-workspace]")];
 function showWorkspace(id, focus = false) {
   if (!workspaces.has(id)) return;
   for (const name of workspaceIds) $(name).hidden = name !== id;
@@ -237,8 +244,9 @@ function showWorkspace(id, focus = false) {
     else link.removeAttribute("aria-current");
   }
   const sidebarId = ["analyzer", "compare"].includes(id) ? id : "corpus";
-  for (const link of document.querySelectorAll('.nav a[data-workspace]')) {
-    if (link.dataset.workspace === sidebarId) link.setAttribute("aria-current", "page");
+  for (const link of document.querySelectorAll(".nav a[data-workspace]")) {
+    if (link.dataset.workspace === sidebarId)
+      link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   }
   const heading = $("active-workspace-name");
@@ -261,7 +269,9 @@ for (const link of [...navigation, ...secondaryNavigation])
   link.addEventListener("click", (event) => activateLink(link, event));
 function restoreWorkspace() {
   const id = location.hash.slice(1);
-  showWorkspace(workspaces.has(id) ? id : "analyzer");
+  if (workspaces.has(id)) showWorkspace(id);
+  else if (!document.querySelector(".tools-index a[aria-current]"))
+    showWorkspace("analyzer");
   if (id === "tool-notice") $("tool-notice").open = true;
 }
 window.addEventListener("popstate", restoreWorkspace);

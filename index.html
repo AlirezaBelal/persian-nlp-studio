@@ -25,31 +25,76 @@
     <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
     <div class="app-shell">
       <aside class="sidebar" aria-label="ناوبری اصلی">
-        <a class="brand" href="./index.html"
-          ><span class="brand-icon" aria-hidden="true">نـ</span
-          ><span
+        <a class="brand" href="#top"
+          ><img
+            class="brand-mark"
+            src="./assets/brand/textnema.svg"
+            width="48"
+            height="48"
+            alt=""
+          /><span
             ><strong>متن‌نما</strong
             ><small lang="en" dir="ltr">PERSIAN NLP STUDIO</small></span
           ></a
         >
         <div class="sidebar-label">فضای کار شما</div>
         <nav class="nav" aria-label="ناوبری اصلی">
-          <a href="#analyzer" data-workspace="analyzer" aria-current="page">تحلیل متن</a>
-          <a href="#compare" data-workspace="compare">مقایسه</a>
-          <a href="#corpus" data-workspace="corpus">ابزارهای تخصصی</a>
-          <a href="#about">دربارهٔ محصول</a>
+          <a href="#analyzer" data-workspace="analyzer" aria-current="page"
+            ><svg
+              class="icon"
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <use href="./assets/icons.svg#analysis"></use></svg
+            >تحلیل متن</a
+          >
+          <a href="#compare" data-workspace="compare"
+            ><svg
+              class="icon"
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <use href="./assets/icons.svg#compare"></use></svg
+            >مقایسه</a
+          >
+          <a href="#corpus" data-workspace="corpus"
+            ><svg
+              class="icon"
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <use href="./assets/icons.svg#corpus"></use></svg
+            >ابزارهای تخصصی</a
+          >
+          <a href="#creator"
+            ><svg
+              class="icon"
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <use href="./assets/icons.svg#contact"></use></svg
+            >سازنده و ارتباط</a
+          >
         </nav>
         <div class="sidebar-note">
-          <span class="lock-icon" aria-hidden="true">✓</span
+          <svg
+            class="icon"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <use href="./assets/icons.svg#shield"></use></svg
           ><strong>متن شما، نزد شما.</strong>
           <p>
             بدون حساب کاربری و ارسال متن به سرور. پردازش در همین مرورگر انجام
             می‌شود.
           </p>
         </div>
-        <a class="sidebar-help" href="#about"
-          >دربارهٔ روش‌ها و حریم خصوصی <span aria-hidden="true">↗</span></a
-        >
+        <a class="sidebar-help" href="#about">دربارهٔ روش‌ها و حریم خصوصی </a>
         <div class="sidebar-bottom">
           <span class="status-dot" aria-hidden="true"></span> فضای کار محلی
           <span>نسخهٔ ۰.۳</span>
@@ -67,34 +112,155 @@
           >
         </header>
         <main id="main" tabindex="-1">
-        <noscript class="script-notice">برای پردازش محلی متن، جاوااسکریپت مرورگر باید فعال باشد. راهنماها و بخش‌های ابزار بدون آن هم قابل‌خواندن‌اند.</noscript>
-          <section class="hero" aria-labelledby="hero-title">
-            <div>
-              <div class="eyebrow">
-                <span class="tiny-mark" aria-hidden="true">✳</span> کمی دقیق‌تر
-                به متن نگاه کن
+          <noscript class="script-notice"
+            >برای پردازش محلی متن، جاوااسکریپت مرورگر باید فعال باشد. راهنماها و
+            بخش‌های ابزار بدون آن هم قابل‌خواندن‌اند.</noscript
+          >
+          <section
+            class="hero product-hero"
+            id="top"
+            aria-labelledby="hero-title"
+          >
+            <div class="hero-copy">
+              <p class="eyebrow">فضای کار خصوصی برای متن فارسی</p>
+              <h1 id="hero-title">
+                متن‌نما؛<br /><span>به واژه‌ها، دقیق‌تر نگاه کن.</span>
+              </h1>
+              <p class="hero-description">
+                از شمارش و مقایسهٔ واژه‌ها تا جست‌وجو در متن و بازبینی نوشتار؛
+                هفت ابزار کاربردی در یک فضای روشن. متن تو در مرورگر خودت پردازش
+                می‌شود.
+              </p>
+              <div class="hero-actions">
+                <a
+                  class="btn btn-primary primary-cta"
+                  href="#analyzer"
+                  data-workspace="analyzer"
+                  >شروع استفاده از متن‌نما</a
+                ><a class="btn btn-outline secondary-cta" href="#features"
+                  >آشنایی با ابزارها</a
+                >
               </div>
-              <h1 id="hero-title">ابزارهای فارسی، <span>در یک فضای منظم.</span></h1>
-              <p>
-                متن را تحلیل و مقایسه کن، در پیکره جست‌وجو کن و نوشتار، نام‌ها، نشانه‌های احساسی و شعر را یک‌جا بررسی کن. همهٔ پردازش‌ها روی دستگاه خودت انجام می‌شود.
+              <p class="hero-trust">
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#shield"></use>
+                </svg>
+                بدون ثبت‌نام، بدون ارسال خودکار متن
               </p>
             </div>
-            <a class="hero-shortcut" href="#corpus"
-              ><span class="shortcut-icon" aria-hidden="true">↖</span
-              ><strong>هفت ابزار، در یک فضای کار</strong
-              ><span>ابزارها را از نوار زیر انتخاب کن؛ ورودی‌ها حفظ می‌شوند</span></a
-            >
+            <div class="brand-scene" aria-hidden="true">
+              <div class="scene-grid"></div>
+              <div class="brand-emblem">
+                <img
+                  src="./assets/brand/textnema.svg"
+                  width="96"
+                  height="96"
+                  alt=""
+                /><strong>متن‌نما</strong
+                ><span lang="en" dir="ltr">TextNema</span>
+              </div>
+              <div class="scene-note">ابزارهای روشن، برای نوشته‌های تو.</div>
+            </div>
           </section>
-          <nav class="tools-index workspace-selector" id="tool-index" aria-label="انتخاب فضای کار">
-            <a href="#analyzer"><span aria-hidden="true">≋</span>تحلیل متن<small>شمارش و یکدست‌سازی</small></a>
-            <a href="#compare"><span aria-hidden="true">⇄</span>مقایسه<small>دو متن کنار هم</small></a>
-            <a href="#corpus"><span aria-hidden="true">⌕</span>پیکره‌کاو<small>جست‌وجو و فایل</small></a>
-            <a href="#hekasreh"><span aria-hidden="true">هـ</span>بازبین نوشتار<small>الگوهای ه و ی</small></a>
-            <a href="#medicine"><span aria-hidden="true">Aa</span>نام‌یاب<small>جست‌وجوی نام</small></a>
-            <a href="#sentiment"><span aria-hidden="true">±</span>احساس‌نما<small>نشانه‌های واژگانی</small></a>
-            <a href="#poetry"><span aria-hidden="true">≈</span>شعرسنج<small>ساختار شعر</small></a>
+          <div class="workspace-heading">
+            <h2 id="workspace-title">فضای کار متن‌نما</h2>
+            <span>یک ابزار انتخاب کن و شروع کن.</span>
+          </div>
+          <nav
+            class="tools-index workspace-selector"
+            id="tool-index"
+            aria-label="انتخاب فضای کار"
+          >
+            <a href="#analyzer"
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#analysis"></use></svg></span
+              >تحلیل متن<small>شمارش و یکدست‌سازی</small></a
+            >
+            <a href="#compare"
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#compare"></use></svg></span
+              >مقایسه<small>دو متن کنار هم</small></a
+            >
+            <a href="#corpus"
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#corpus"></use></svg></span
+              >پیکره‌کاو<small>جست‌وجو و فایل</small></a
+            >
+            <a href="#hekasreh"
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#hekasreh"></use></svg></span
+              >بازبین نوشتار<small>الگوهای ه و ی</small></a
+            >
+            <a href="#medicine"
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#medicine"></use></svg></span
+              >نام‌یاب<small>جست‌وجوی نام</small></a
+            >
+            <a href="#sentiment"
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#sentiment"></use></svg></span
+              >احساس‌نما<small>نشانه‌های واژگانی</small></a
+            >
+            <a href="#poetry"
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#poetry"></use></svg></span
+              >شعرسنج<small>ساختار شعر</small></a
+            >
           </nav>
-          <div class="tool-guidance"><span class="status-dot" aria-hidden="true"></span><p>هفت ابزار در یک صفحه؛ نوشتهٔ هر بخش هنگام جابه‌جایی محفوظ می‌ماند و به سرور ارسال نمی‌شود.</p></div>
+          <div class="tool-guidance">
+            <span class="status-dot" aria-hidden="true"></span>
+            <p>
+              هفت ابزار در یک صفحه؛ نوشتهٔ هر بخش هنگام جابه‌جایی محفوظ می‌ماند
+              و به سرور ارسال نمی‌شود.
+            </p>
+          </div>
           <section
             class="workspace"
             id="analyzer"
@@ -114,7 +280,14 @@
                 <div class="panel input-panel">
                   <div class="panel-header">
                     <label for="main-text"
-                      ><span class="panel-symbol" aria-hidden="true">¶</span>
+                      ><svg
+                        class="icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <use href="./assets/icons.svg#analysis"></use>
+                      </svg>
                       متن شما</label
                     ><span class="muted" id="input-length">۰ / ۲۰٬۰۰۰</span>
                   </div>
@@ -136,13 +309,27 @@
                         class="btn btn-outline"
                         type="button"
                       >
-                        <span aria-hidden="true">＋</span> متن نمونه</button
+                        <svg
+                          class="icon"
+                          aria-hidden="true"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <use href="./assets/icons.svg#sample"></use></svg
+                        >متن نمونه</button
                       ><button
                         id="clear-btn"
                         class="btn btn-ghost"
                         type="button"
                       >
-                        پاک‌کردن
+                        <svg
+                          class="icon"
+                          aria-hidden="true"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <use href="./assets/icons.svg#clear"></use></svg
+                        >پاک‌کردن
                       </button>
                     </div>
                   </div>
@@ -156,11 +343,22 @@
                       type="button"
                       disabled
                     >
-                      کپی متن <span aria-hidden="true">⧉</span>
+                      <span class="copy-label">کپی متن</span
+                      ><svg
+                        class="icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <use href="./assets/icons.svg#copy"></use>
+                      </svg>
                     </button>
                   </div>
                   <pre
-                    id="normalized-output" tabindex="0" role="region" aria-label="متن یکدست‌شده"
+                    id="normalized-output"
+                    tabindex="0"
+                    role="region"
+                    aria-label="متن یکدست‌شده"
                     class="normalized-text"
                     aria-live="polite"
                   >
@@ -199,7 +397,14 @@
                   <h3>واژه‌های پرتکرار</h3>
                   <span>۱۲ واژهٔ نخست</span>
                 </div>
-                <div id="frequencies" tabindex="0" role="region" aria-label="واژه‌های پرتکرار" class="frequency-list" aria-live="polite">
+                <div
+                  id="frequencies"
+                  tabindex="0"
+                  role="region"
+                  aria-label="واژه‌های پرتکرار"
+                  class="frequency-list"
+                  aria-live="polite"
+                >
                   <p class="empty">برای دیدن واژه‌ها، متنی وارد کنید.</p>
                 </div>
                 <div class="export-area">
@@ -210,7 +415,14 @@
                     disabled
                   >
                     دریافت گزارش آماری <span lang="en">JSON</span
-                    ><span aria-hidden="true">↓</span>
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#download"></use>
+                    </svg>
                   </button>
                   <p>فقط آمار عددی؛ بدون متن و فهرست واژه‌ها.</p>
                 </div>
@@ -342,12 +554,28 @@
                     type="button"
                     data-sample="corpus"
                   >
+                    <svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#sample"></use>
+                    </svg>
                     متن نمونه</button
                   ><button
                     class="btn btn-ghost"
                     type="button"
                     data-clear="corpus"
                   >
+                    <svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#clear"></use>
+                    </svg>
                     پاک‌کردن
                   </button>
                   <p class="hint">
@@ -362,13 +590,25 @@
                 <div class="tool-result-columns">
                   <div>
                     <h4>بافت‌های پیدا‌شده</h4>
-                    <div id="corpus-contexts" tabindex="0" role="region" aria-label="بافت‌های یافت‌شده" class="result-stack">
+                    <div
+                      id="corpus-contexts"
+                      tabindex="0"
+                      role="region"
+                      aria-label="بافت‌های یافت‌شده"
+                      class="result-stack"
+                    >
                       <p class="empty-tool">هنوز عبارتی وارد نشده است.</p>
                     </div>
                   </div>
                   <div>
                     <h4>عبارت‌های دوتایی پرتکرار</h4>
-                    <div id="corpus-bigrams" tabindex="0" role="region" aria-label="عبارت‌های دوتایی" class="result-stack">
+                    <div
+                      id="corpus-bigrams"
+                      tabindex="0"
+                      role="region"
+                      aria-label="عبارت‌های دوتایی"
+                      class="result-stack"
+                    >
                       <p class="empty-tool">متن نمونه را امتحان کن.</p>
                     </div>
                   </div>
@@ -405,12 +645,28 @@
                   type="button"
                   data-sample="hekasreh"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#sample"></use>
+                  </svg>
                   متن نمونه</button
                 ><button
                   class="btn btn-ghost"
                   type="button"
                   data-clear="hekasreh"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#clear"></use>
+                  </svg>
                   پاک‌کردن</button
                 ><span class="tool-muted"
                   >هیچ تغییری خودکار به متن اصلی اعمال نمی‌شود.</span
@@ -420,7 +676,13 @@
                 <h3>
                   موارد نیازمند بررسی: <strong id="hekasreh-count">۰</strong>
                 </h3>
-                <div id="hekasreh-results" tabindex="0" role="region" aria-label="پیشنهادهای بازبینی" class="result-stack">
+                <div
+                  id="hekasreh-results"
+                  tabindex="0"
+                  role="region"
+                  aria-label="پیشنهادهای بازبینی"
+                  class="result-stack"
+                >
                   <p class="empty-tool">
                     نمونه‌ای وارد کن تا الگوها مشخص شوند.
                   </p>
@@ -456,12 +718,28 @@
                   type="button"
                   data-sample="medicine"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#sample"></use>
+                  </svg>
                   متن نمونه</button
                 ><button
                   class="btn btn-ghost"
                   type="button"
                   data-clear="medicine"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#clear"></use>
+                  </svg>
                   پاک‌کردن
                 </button>
               </div>
@@ -472,7 +750,13 @@
               </p>
               <div class="tool-result" aria-live="polite">
                 <h3>نام‌های نزدیک به جست‌وجو</h3>
-                <div id="medicine-results" tabindex="0" role="region" aria-label="نام‌های نزدیک" class="result-stack">
+                <div
+                  id="medicine-results"
+                  tabindex="0"
+                  role="region"
+                  aria-label="نام‌های نزدیک"
+                  class="result-stack"
+                >
                   <p class="empty-tool">نامی را وارد کن.</p>
                 </div>
               </div>
@@ -517,12 +801,28 @@
                   type="button"
                   data-sample="sentiment"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#sample"></use>
+                  </svg>
                   متن نمونه</button
                 ><button
                   class="btn btn-ghost"
                   type="button"
                   data-clear="sentiment"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#clear"></use>
+                  </svg>
                   پاک‌کردن
                 </button>
               </div>
@@ -531,7 +831,13 @@
                 <p id="sentiment-summary" class="tool-muted">
                   فقط شواهد واژگانی نمایش داده می‌شوند.
                 </p>
-                <div id="sentiment-evidence" tabindex="0" role="region" aria-label="شواهد واژگانی" class="result-stack"></div>
+                <div
+                  id="sentiment-evidence"
+                  tabindex="0"
+                  role="region"
+                  aria-label="شواهد واژگانی"
+                  class="result-stack"
+                ></div>
               </div>
             </div>
           </section>
@@ -564,12 +870,28 @@
                   type="button"
                   data-sample="poetry"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#sample"></use>
+                  </svg>
                   شعر نمونه</button
                 ><button
                   class="btn btn-ghost"
                   type="button"
                   data-clear="poetry"
                 >
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <use href="./assets/icons.svg#clear"></use>
+                  </svg>
                   پاک‌کردن</button
                 ><span class="tool-muted"
                   >هم‌پایانی نوشتاری، جایگزین قافیه‌شناسی عروضی یا تولید شعر
@@ -581,13 +903,25 @@
                 <div class="tool-result-columns">
                   <div>
                     <h4>پایان‌بندی‌های مشابه</h4>
-                    <div id="poetry-endings" tabindex="0" role="region" aria-label="پایان‌بندی‌ها" class="result-stack">
+                    <div
+                      id="poetry-endings"
+                      tabindex="0"
+                      role="region"
+                      aria-label="پایان‌بندی‌ها"
+                      class="result-stack"
+                    >
                       <p class="empty-tool">شعری وارد کن.</p>
                     </div>
                   </div>
                   <div>
                     <h4>واژه‌های پرتکرار</h4>
-                    <div id="poetry-frequencies" tabindex="0" role="region" aria-label="واژه‌های پرتکرار شعر" class="result-stack"></div>
+                    <div
+                      id="poetry-frequencies"
+                      tabindex="0"
+                      role="region"
+                      aria-label="واژه‌های پرتکرار شعر"
+                      class="result-stack"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -597,7 +931,14 @@
           <details class="accuracy-notice" id="tool-notice">
             <summary>
               دربارهٔ روش ابزارها و حریم خصوصی
-              <span aria-hidden="true">＋</span>
+              <svg
+                class="icon"
+                aria-hidden="true"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <use href="./assets/icons.svg#plus"></use>
+              </svg>
             </summary>
             <div>
               <p>
@@ -612,52 +953,411 @@
                 تأیید جایگزینی دارو نیست. شعرسنج هم ابزار تولید شعر یا ارزیابی
                 عروض نیست.
               </p>
-              <a href="#analyzer" class="text-link" data-workspace="analyzer">بازگشت به تحلیل متن ←</a
+              <a href="#analyzer" class="text-link" data-workspace="analyzer"
+                >بازگشت به تحلیل متن</a
               >
             </div>
           </details>
-          <section class="about" id="about" aria-labelledby="about-title">
-            <div class="about-intro">
-              <span class="section-kicker">شفاف، از ابتدا تا انتها</span>
-              <h2 id="about-title">ابزار روشن.<br />نتیجهٔ قابل‌بررسی.</h2>
-              <a href="#corpus" class="text-link"
-                >رفتن به جعبه‌ابزار <span aria-hidden="true">←</span></a
+          <section
+            class="product-section introduction"
+            id="about"
+            aria-labelledby="about-title"
+          >
+            <div class="section-heading">
+              <p class="section-kicker">برای کارهای واقعی با متن</p>
+              <h2 id="about-title">از یک نوشته، چیزهای بیشتری ببین.</h2>
+            </div>
+            <div class="intro-grid">
+              <p>
+                متن‌نما مجموعه‌ای از ابزارهای کاربردی پردازش متن فارسی است؛ برای
+                وقتی که می‌خواهی نوشته‌ای را دقیق‌تر بخوانی، دو متن را مقایسه
+                کنی یا در فایل خودت دنبال یک عبارت بگردی. هر ابزار روش و محدودیت
+                مشخصی دارد.
+              </p>
+              <div class="audience-list">
+                <span>برای نویسنده‌ها و ویراستارها</span
+                ><span>برای پژوهشگرانِ متن</span
+                ><span>برای هر کسی که با فارسی کار می‌کند</span>
+              </div>
+            </div>
+          </section>
+          <section
+            class="product-section"
+            id="features"
+            aria-labelledby="features-title"
+          >
+            <div class="section-heading">
+              <p class="section-kicker">هفت ابزار، یک تجربهٔ پیوسته</p>
+              <h2 id="features-title">ابزاری برای هر زاویهٔ نگاه.</h2>
+              <p>
+                ابزار دلخواهت را باز کن؛ با جابه‌جایی میان آن‌ها، متن واردشده در
+                همان صفحه باقی می‌ماند.
+              </p>
+            </div>
+            <div class="feature-grid">
+              <a class="feature-card" href="#analyzer" data-workspace="analyzer"
+                ><div class="feature-card-top">
+                  <span class="feature-icon"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#analysis"></use></svg></span
+                  ><span class="feature-number">۰۱</span>
+                </div>
+                <h3>تحلیل متن</h3>
+                <strong>نوشته‌ات را در یک نگاه ببین.</strong>
+                <p>
+                  شمارش واژه و نویسه، واژه‌های پرتکرار، نوشتار یکدست‌شده و گزارش
+                  آماری JSON؛ بدون قرارگرفتن متن در خروجی.
+                </p>
+                <span class="feature-action">بازکردن تحلیل متن</span></a
+              ><a class="feature-card" href="#compare" data-workspace="compare"
+                ><div class="feature-card-top">
+                  <span class="feature-icon"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#compare"></use></svg></span
+                  ><span class="feature-number">۰۲</span>
+                </div>
+                <h3>مقایسهٔ دو متن</h3>
+                <strong>اشتراک واژه‌ها را پیدا کن.</strong>
+                <p>
+                  دو نوشته را کنار هم بگذار و اشتراک واژگان یکتای آن‌ها را ببین؛
+                  این مقایسه، سنجش شباهت معنایی نیست.
+                </p>
+                <span class="feature-action">بازکردن مقایسهٔ دو متن</span></a
+              ><a class="feature-card" href="#corpus" data-workspace="corpus"
+                ><div class="feature-card-top">
+                  <span class="feature-icon"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#corpus"></use></svg></span
+                  ><span class="feature-number">۰۳</span>
+                </div>
+                <h3>پیکره‌کاو</h3>
+                <strong>عبارت‌ها را در بافت خودشان ببین.</strong>
+                <p>
+                  در متن یا فایل محلی TXT و JSONL جست‌وجو کن؛ بافت‌های یافت‌شده
+                  و عبارت‌های دوتایی پرتکرار را بررسی کن.
+                </p>
+                <span class="feature-action">بازکردن پیکره‌کاو</span></a
+              ><a
+                class="feature-card"
+                href="#hekasreh"
+                data-workspace="hekasreh"
+                ><div class="feature-card-top">
+                  <span class="feature-icon"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#hekasreh"></use></svg></span
+                  ><span class="feature-number">۰۴</span>
+                </div>
+                <h3>بازبین نوشتار</h3>
+                <strong>یک نگاه دوباره به «ه» و «ی».</strong>
+                <p>
+                  شکل‌های قابل‌بازبینی را پیدا کن و پیشنهادهای اختیاری را ببین.
+                  هیچ اصلاحی خودکار روی متن تو اعمال نمی‌شود.
+                </p>
+                <span class="feature-action">بازکردن بازبین نوشتار</span></a
+              ><a
+                class="feature-card"
+                href="#medicine"
+                data-workspace="medicine"
+                ><div class="feature-card-top">
+                  <span class="feature-icon"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#medicine"></use></svg></span
+                  ><span class="feature-number">۰۵</span>
+                </div>
+                <h3>نام‌یاب</h3>
+                <strong>املای نام ژنریک را جست‌وجو کن.</strong>
+                <p>
+                  تطبیق فارسی و انگلیسی در یک فهرست کوچک املایی. این ابزار مرجع
+                  پزشکی، تجویز یا تأیید جایگزینی دارو نیست.
+                </p>
+                <span class="feature-action">بازکردن نام‌یاب</span></a
+              ><a
+                class="feature-card"
+                href="#sentiment"
+                data-workspace="sentiment"
+                ><div class="feature-card-top">
+                  <span class="feature-icon"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use
+                        href="./assets/icons.svg#sentiment"
+                      ></use></svg></span
+                  ><span class="feature-number">۰۶</span>
+                </div>
+                <h3>احساس‌نما</h3>
+                <strong>سرنخ‌های واژگانی را جدا کن.</strong>
+                <p>
+                  واژه‌های مثبت و منفی را در متن یا موضوع انتخابی ببین؛ شواهدی
+                  شفاف، بدون ادعای تشخیص احساس واقعی نویسنده.
+                </p>
+                <span class="feature-action">بازکردن احساس‌نما</span></a
+              ><a class="feature-card" href="#poetry" data-workspace="poetry"
+                ><div class="feature-card-top">
+                  <span class="feature-icon"
+                    ><svg
+                      class="icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="./assets/icons.svg#poetry"></use></svg></span
+                  ><span class="feature-number">۰۷</span>
+                </div>
+                <h3>شعرسنج</h3>
+                <strong>به ساختار شعر نزدیک‌تر شو.</strong>
+                <p>
+                  تعداد سطرها، واژه‌های پرتکرار و پایان‌بندی‌های نوشتاری مشابه
+                  را ببین؛ بدون ادعای عروض‌سنجی یا تولید شعر.
+                </p>
+                <span class="feature-action">بازکردن شعرسنج</span></a
               >
             </div>
-            <div class="about-grid">
-              <article>
-                <span class="about-symbol" aria-hidden="true">↳</span>
-                <h3>در مرورگر تو</h3>
+          </section>
+          <section
+            class="product-section how-section"
+            id="how-it-works"
+            aria-labelledby="how-title"
+          >
+            <div class="section-heading">
+              <p class="section-kicker">از ورودی تا نتیجه</p>
+              <h2 id="how-title">چطور کار می‌کند؟</h2>
+            </div>
+            <ol class="steps-list">
+              <li>
+                <span class="step-number">۰۱</span>
+                <h3>ابزار را انتخاب کن</h3>
                 <p>
-                  متن و فایل واردشده از طریق برنامه ارسال نمی‌شوند و بعد از بستن
-                  صفحه باقی نمی‌مانند. میزبان ممکن است درخواست‌های عادی بازدید
-                  را ثبت کند.
+                  از هفت فضای کاری، ابزاری را انتخاب کن که به پرسشت نزدیک‌تر
+                  است.
                 </p>
-              </article>
-              <article>
-                <span class="about-symbol" aria-hidden="true">≋</span>
-                <h3>روش‌های مشخص</h3>
+              </li>
+              <li>
+                <span class="step-number">۰۲</span>
+                <h3>متنت را وارد کن</h3>
                 <p>
-                  شمارش، یکدست‌سازی و مقایسهٔ واژگان. مدل یادگیری ماشین یا تحلیل
-                  معنایی در این نسخه اجرا نمی‌شود.
+                  بنویس، بچسبان یا در پیکره‌کاو فایل محلی باز کن. برای شروع،
+                  نمونه‌ها هم آماده‌اند.
                 </p>
-              </article>
-              <article>
-                <span class="about-symbol" aria-hidden="true">↓</span>
-                <h3>خروجی بدون متن</h3>
+              </li>
+              <li>
+                <span class="step-number">۰۳</span>
+                <h3>نتیجه را بررسی کن</h3>
                 <p>
-                  گزارش JSON فقط شاخص‌های عددی را نگه می‌دارد. ورودی و واژه‌های
-                  استخراج‌شده در آن نیستند.
+                  خروجی هم‌زمان به‌روز می‌شود. روش و محدودیت ابزار را بخوان و
+                  نتیجه را با متن خودت بسنج.
                 </p>
-              </article>
+              </li>
+            </ol>
+          </section>
+          <section
+            class="product-section privacy-section"
+            id="privacy"
+            aria-labelledby="privacy-title"
+          >
+            <div class="privacy-symbol">
+              <svg
+                class="icon"
+                aria-hidden="true"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <use href="./assets/icons.svg#shield"></use>
+              </svg>
+            </div>
+            <div>
+              <p class="section-kicker">حریم خصوصی، بخشی از تجربه</p>
+              <h2 id="privacy-title">متن تو، در مرورگر تو.</h2>
+              <p>
+                متن و فایل انتخابی به‌صورت محلی پردازش می‌شوند؛ برنامه آن‌ها را
+                خودکار بارگذاری نمی‌کند و در حافظهٔ دائمی مرورگر ذخیره نمی‌کند.
+                با بستن یا بارگذاری دوبارهٔ صفحه، ورودی‌ها از دست می‌روند.
+              </p>
+              <p>
+                دریافت گزارش JSON فقط شاخص‌های عددی را خروجی می‌دهد. کپی متن هم
+                تنها با انتخاب خودت انجام می‌شود. میزبان GitHub Pages ممکن است
+                درخواست‌های عادی بازدید از سایت را ثبت کند؛ این برنامه ابزار
+                ردیابی ندارد.
+              </p>
+              <a class="text-link" href="#tool-notice"
+                >روش‌ها و محدودیت‌های ابزارها</a
+              >
+            </div>
+          </section>
+          <section
+            class="product-section creator-section"
+            id="creator"
+            aria-labelledby="creator-title"
+          >
+            <div class="creator-heading">
+              <p class="section-kicker">پشت این محصول</p>
+              <h2 id="creator-title">دربارهٔ سازنده</h2>
+              <a
+                href="https://github.com/AlirezaBelal"
+                class="creator-name"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><bdi lang="en">Alireza Belal</bdi
+                ><span class="sr-only"> (در زبانهٔ جدید)</span></a
+              ><span class="creator-handle" dir="ltr">@AlirezaBelal</span>
+            </div>
+            <div class="creator-copy">
+              <p>
+                متن‌نما به‌دست <bdi lang="en">Alireza Belal</bdi> توسعه یافته
+                است؛ با هدف فراهم‌کردن ابزارهایی عملی برای کار روزمره با متن
+                فارسی، در یک فضای منظم و قابل‌فهم.
+              </p>
+              <p>
+                تمرکز این محصول بر کاربرد روشن، دسترس‌پذیری و توجه به حریم خصوصی
+                است. ابزارها روش خود را توضیح می‌دهند و به‌جای وعدهٔ تحلیل
+                هوشمند، نتیجه‌ای ارائه می‌کنند که بتوانی بررسی‌اش کنی.
+              </p>
+              <p class="verified-note">
+                نام سازنده مطابق پروفایل عمومی GitHub درج شده است.
+              </p>
+            </div>
+          </section>
+          <section
+            class="product-section contact-section"
+            id="contact"
+            aria-labelledby="contact-title"
+          >
+            <span class="contact-icon"
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <use href="./assets/icons.svg#contact"></use></svg
+            ></span>
+            <div>
+              <p class="section-kicker">گفت‌وگو دربارهٔ محصول</p>
+              <h2 id="contact-title">ارتباط با من</h2>
+              <p>
+                پیشنهادی برای متن‌نما داری یا به مشکلی برخوردی؟ از مسیر عمومی
+                GitHub با سازنده در ارتباط باش. در گزارش‌های عمومی، متن خصوصی یا
+                اطلاعات حساس ننویس.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a
+                href="https://github.com/AlirezaBelal"
+                class="btn btn-primary contact-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="./assets/icons.svg#github"></use></svg
+                >ارتباط از طریق GitHub<span class="sr-only">
+                  (در زبانهٔ جدید)</span
+                ></a
+              ><a
+                href="https://github.com/AlirezaBelal/persian-nlp-studio/issues"
+                class="text-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ثبت پیشنهاد یا گزارش مشکل<span class="sr-only">
+                  (در زبانهٔ جدید)</span
+                ></a
+              >
             </div>
           </section>
         </main>
-        <footer class="footer">
-          <span>برای واژه‌هایی که اهمیت دارند.</span
-          ><span
-            >متن‌نما <span aria-hidden="true">·</span> ابزارهای محلی فارسی</span
-          >
+        <footer class="footer product-footer">
+          <div class="footer-main">
+            <div class="footer-brand">
+              <a class="brand" href="#top"
+                ><img
+                  class="brand-mark"
+                  src="./assets/brand/textnema.svg"
+                  width="48"
+                  height="48"
+                  alt=""
+                /><span
+                  ><strong>متن‌نما</strong
+                  ><small lang="en" dir="ltr"
+                    >TextNema · Persian NLP Studio</small
+                  ></span
+                ></a
+              >
+              <p>
+                ابزارهای کاربردی فارسی؛ برای دیدن روشن‌تر نوشته‌ها، با پردازش
+                محلی در مرورگر.
+              </p>
+            </div>
+            <nav class="footer-links" aria-label="پیوندهای پایین صفحه">
+              <a href="#features">ابزارها</a><a href="#about">دربارهٔ متن‌نما</a
+              ><a href="#creator">دربارهٔ سازنده</a
+              ><a href="#privacy">حریم خصوصی</a
+              ><a href="#contact">ارتباط با من</a
+              ><a
+                href="https://github.com/AlirezaBelal/persian-nlp-studio"
+                class=""
+                target="_blank"
+                rel="noopener noreferrer"
+                >مخزن GitHub<span class="sr-only"> (در زبانهٔ جدید)</span></a
+              >
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>
+              طراحی و توسعه توسط
+              <a
+                href="https://github.com/AlirezaBelal"
+                class=""
+                target="_blank"
+                rel="noopener noreferrer"
+                ><bdi lang="en">Alireza Belal</bdi
+                ><span class="sr-only"> (در زبانهٔ جدید)</span></a
+              >
+            </p>
+            <p>© 2026 <bdi lang="en">Alireza Belal</bdi> · متن‌نما</p>
+          </div>
+          <p class="license-credit">
+            فونت وزیرمتن، اثر نویسندگان پروژهٔ Vazirmatn، با مجوز
+            <a href="./assets/fonts/OFL-Vazirmatn.txt">SIL OFL 1.1</a>.
+            <a
+              href="https://github.com/AlirezaBelal/persian-nlp-studio/blob/master/LICENSE"
+              class=""
+              target="_blank"
+              rel="noopener noreferrer"
+              >مجوز کد محصول<span class="sr-only"> (در زبانهٔ جدید)</span></a
+            >
+            مستقل از مجوز دارایی‌های شخص ثالث است.
+          </p>
         </footer>
       </div>
     </div>
