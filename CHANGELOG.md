@@ -67,3 +67,10 @@ The public product contains no private historical datasets, original trained wei
 - Improved empty states, local file guidance and stale-import protection.
 - Added keyboard, reflow and WCAG A/AA browser checks with CI-only axe; no runtime dependency.
 - Supersedes previous backup-gated retirement instructions with the owner's explicit current authorization; actual deletion outcome is recorded separately in release notes.
+
+## 0.5.0 — 2026-11-04
+- Complete Persian landing, seven feature cards, three-step guidance, privacy, creator, contact and footer.
+- Verified public creator credit and GitHub contact; no unverified email or biography.
+- Original local SVG logo/favicon and consistent icon sprite. Full Vazirmatn OFL included in Pages.
+- Landing/card/footer navigation retains the same seven workspaces, history and in-memory text. Engines and numeric-only export retained.
+- Added landing, link, asset, creator/contact and keyboard browser acceptance without weakening previous tests.

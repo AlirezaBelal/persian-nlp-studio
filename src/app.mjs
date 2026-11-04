@@ -127,9 +127,9 @@ $("copy-btn").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(normalizePersian(mainInput.value));
     $("announcements").textContent = "متن یکدست‌شده کپی شد.";
-    $("copy-btn").textContent = "کپی شد ✓";
+    $("copy-btn").querySelector(".copy-label").textContent = "کپی شد";
     setTimeout(() => {
-      $("copy-btn").textContent = "کپی متن ⧉";
+      $("copy-btn").querySelector(".copy-label").textContent = "کپی متن";
     }, 1800);
   } catch {
     $("announcements").textContent =

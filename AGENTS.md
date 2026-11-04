@@ -44,3 +44,6 @@ Project skills: run `node scripts/setup-codex-skills.mjs --init`, then `node scr
 - The v0.3 workspace is Persian-first, light, mobile-first and buildless. Shared tokens/components live in `styles.css`; specialist layout in `tools.css`.
 - Specialist links progressively enhance into one visible workspace. Preserve fragment deep links, back/forward navigation, input retention and a no-JavaScript readable fallback.
 - Run the pinned Playwright + axe CI suite. Keep all functional, privacy, keyboard, reflow and contrast assertions enabled. No runtime package, CDN font or tracking is needed.
+
+## Current public release scope
+Only modify this product for the final public-facing release. Do not access or modify MohlatBan or the legacy private research repository for this task. Preserve all seven workspace engines and add presentation/navigation changes around them. See PRODUCT_RELEASE.md for verified creator/contact provenance and asset rights.

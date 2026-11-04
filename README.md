@@ -65,3 +65,9 @@ Seven workspaces live in **one document** rather than separate analyzer/toolbox 
 - Import, export, keyboard, responsive and WCAG A/AA behavior remain covered by automated browser tests.
 
 The previous v0.3 redesign remains documented in [REDESIGN.md](REDESIGN.md). The present system is independently maintained in `unified.css`; ML limitations remain in [FEATURE_SCOPE.md](FEATURE_SCOPE.md).
+
+## Public product release v0.5
+
+The main site includes the TextNema landing page, seven descriptive tool cards, a three-step guide, privacy details, creator credit, verified GitHub contact and a full footer. The interactive application stays in the same document; use the primary start action or any tool card to open a workspace. Local SVG branding and icons require no external service.
+
+Designed and developed by [Alireza Belal](https://github.com/AlirezaBelal), as verified from the public GitHub profile. No public email was exposed by the unauthenticated API, so no email address is published. [Release decisions and verification](PRODUCT_RELEASE.md) describe contact provenance, original branding and separate font licensing.
