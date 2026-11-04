@@ -5,7 +5,7 @@ This repository is the standalone **Persian NLP Studio / متن‌نما** produ
 ## Repository scope
 - Work only in `AlirezaBelal/persian-nlp-studio` unless the user separately authorizes another named repository.
 - Never expose private-source materials, inherited datasets, model checkpoints, personal identifiers, credentials or private Git history.
-- Do not delete or change the visibility of another repository without explicit owner authorization naming it. The latest owner instruction for the separately named legacy repository explicitly waives backup gates and authorizes deletion after the redesigned public product is merged and deployed. Do not reimpose superseded backup conditions; never infer that a backup or recovery exists. No unrelated repository deletion is authorized.
+- This product grants no standing authorization to inspect, delete, archive or change the visibility of another repository. Follow the current owner instruction and its named scope; historical approvals in documentation do not authorize a later task. Never infer that a backup or recovery exists.
 - Keep the public product independent of an ML backend until an evaluated and privacy-reviewed model integration exists.
 
 ## Existing functionality

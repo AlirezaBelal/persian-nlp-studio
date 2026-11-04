@@ -35,16 +35,16 @@ All publicly deployed modules run in the browser and are lexical or rule-based. 
 
 ## Retirement checklist
 
-The separately authorized legacy deletion is an owner decision, not an application dependency. The latest explicit owner instruction waives the previous backup prerequisite and authorizes deletion only after this redesign is merged and deployed. Do not claim that unique historical assets have been backed up, restored or replaced by trained models.
+Any retirement of a separate repository is outside routine product maintenance. Historical instructions are not standing authorization for a future operation.
 
-- Confirm the exact owner and repository identity immediately before the destructive request.
-- Verify public product CI, deployment and independent browser behavior first.
-- Delete only the explicitly named repository through authorized access; no archive or visibility substitute.
-- If the actual interface or permission blocks deletion, record the precise result. Do not request or expose tokens and do not alter unrelated repositories.
-- Record the actual outcome in release notes and the closure report; source documentation alone is not proof of deletion.
+- Obtain a separate, current owner decision naming the repository and exact action.
+- Keep private repositories out of a public-product audit unless separately authorized.
+- Before a retirement decision, document unique assets, licensing, preservation and recovery evidence; never infer that historical assets are backed up or replaced by trained models.
+- Preserve the product's independent setup and verify CI, deployment and browser behavior.
+- Record only observed outcomes. Do not delete, archive, empty or change visibility as part of ordinary product cleanup.
 
 ## Interface verification
 
-The supported release has two pages with a shared mobile-first design system. Specialist workspaces use fragment navigation and preserve inputs in page memory, not persistent storage. Clipboard copying requires an explicit user action and has a clear unavailable fallback.
+The supported release has one canonical application at `index.html` with a shared mobile-first design system. `tools.html` only redirects legacy bookmarks. Specialist workspaces use fragment navigation and preserve inputs in page memory, not persistent storage. Clipboard copying requires an explicit user action and has a clear unavailable fallback.
 
 Browser dependencies are CI/development only: `npm install --no-save --no-package-lock --ignore-scripts '@playwright/test@1.56.1' '@axe-core/playwright@4.14.0'`, then `npx playwright install chromium` and `npx playwright test --config=playwright.config.mjs`. The suite includes axe WCAG A/AA checks; this is not a certification of every accessibility criterion. No production dependency is installed.

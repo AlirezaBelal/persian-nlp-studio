@@ -8,7 +8,7 @@ Keep this checklist current for every release. Never infer deployment success fr
 - [x] Product is public; end-user texts are processed locally in the published static UI.
 - [x] JSON download uses a strict allowlist of aggregate numeric measurements, not user input or vocabulary.
 - [x] User-owned UTF-8 TXT/JSONL file imports enforce format and size limits, and run in the browser.
-- [x] `AGENTS.md` and the GitHub maintenance skill document safe scope and required review.
+- [x] `AGENTS.md` and `MAINTENANCE.md` document safe scope and required review; `CODEX_SKILLS.md` describes the optional pinned skills collection.
 
 ## Verification on the current change
 
